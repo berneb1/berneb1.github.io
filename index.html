@@ -18,24 +18,16 @@ content="Bully Cyber Security helps businesses identify risks, uncover vulnerabi
 <style>
 
 :root{
---green:#0b1f33;
---green2:#12395b;
---gold:#16c7b7;
---text:#dce7f3;
---muted:#8ea3b8;
---border:rgba(120,160,200,.14);
+--green:#12395b;
+--green2:#1c4d77;
+--gold:#2de3d2;
+--text:#f2f6fb;
+--muted:#c7d6e6;
+--border:rgba(255,255,255,.10);
 --shadow:0 24px 80px rgba(0,0,0,.35);
---shadow2:0 18px 52px rgba(22,199,183,.16);
+--shadow2:0 18px 52px rgba(45,227,210,.22);
 --container:1120px;
 --radius:24px;
---panel:#0f1724;
---panel-2:#132033;
---panel-3:#16263d;
---white:#ffffff;
-}
-
-html{
-scroll-behavior:smooth;
 }
 
 body{
@@ -43,30 +35,11 @@ margin:0;
 font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
 color:var(--text);
 background:
-radial-gradient(900px 420px at 50% 0%, rgba(18,57,91,.32), transparent 60%),
-radial-gradient(700px 440px at 12% 18%, rgba(22,199,183,.09), transparent 55%),
-radial-gradient(760px 460px at 88% 20%, rgba(38,76,122,.18), transparent 60%),
-linear-gradient(180deg,#08111d,#0c1624 58%, #0a1220 100%);
+radial-gradient(900px 420px at 50% 0%, rgba(18,57,91,.35), transparent 60%),
+radial-gradient(700px 440px at 12% 18%, rgba(45,227,210,.15), transparent 55%),
+radial-gradient(760px 460px at 88% 20%, rgba(33,88,140,.20), transparent 60%),
+linear-gradient(180deg,#0e1b2a,#13263d 60%, #162c46 100%);
 overflow-x:hidden;
-}
-
-body::after{
-content:"";
-position:fixed;
-inset:0;
-pointer-events:none;
-z-index:0;
-opacity:.06;
-background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
-background-repeat:repeat;
-}
-
-.container{
-max-width:var(--container);
-margin:auto;
-padding:2rem 1.25rem;
-position:relative;
-z-index:1;
 }
 
 .nav{
@@ -78,73 +51,38 @@ border-bottom:1px solid var(--border);
 position:sticky;
 top:0;
 z-index:50;
-background:rgba(8,17,29,.84);
+background:rgba(10,20,35,.82);
 backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-}
-
-.brand{
-display:flex;
-gap:.75rem;
-align-items:center;
-text-decoration:none;
-color:inherit;
 }
 
 .monogram{
 width:44px;
 height:44px;
 border-radius:14px;
-background:linear-gradient(135deg,var(--green2),#0d5a8f);
+background:linear-gradient(135deg,#2de3d2,#1c4d77);
 display:grid;
 place-items:center;
 color:#fff;
 font-weight:800;
 box-shadow:0 16px 40px rgba(0,0,0,.35);
-border:1px solid rgba(255,255,255,.08);
 }
 
 .brand-copy strong{
-display:block;
 font-family:"Playfair Display",serif;
 color:#ffffff;
-font-size:1.08rem;
-}
-
-.brand-copy span{
-font-size:.84rem;
-color:var(--muted);
-}
-
-.nav-links{
-display:flex;
-gap:.5rem;
-flex-wrap:wrap;
-justify-content:flex-end;
 }
 
 .nav-links a{
-text-decoration:none;
-font-weight:800;
-color:var(--muted);
-padding:.5rem .8rem;
-border-radius:999px;
-transition:.18s ease;
+color:#cfe3f5;
 }
 
 .nav-links a:hover{
-background:rgba(22,199,183,.10);
-color:#fff;
+background:rgba(45,227,210,.12);
+color:white;
 }
 
 .nav-links a.cta{
-background:linear-gradient(135deg,#16c7b7,#0d8e9c);
-color:white;
-box-shadow:var(--shadow2);
-}
-
-.nav-links a.cta:hover{
-background:linear-gradient(135deg,#14b5a8,#0b7986);
+background:linear-gradient(135deg,#2de3d2,#19b4c7);
 color:white;
 }
 
@@ -152,471 +90,88 @@ color:white;
 text-align:center;
 padding:5rem 1rem 2.5rem;
 background-image:
-linear-gradient(180deg, rgba(4,10,18,.72), rgba(4,10,18,.62)),
+linear-gradient(180deg, rgba(8,15,25,.70), rgba(8,15,25,.55)),
 url("cyber-hero.jpg");
 background-size:cover;
 background-position:center;
-background-repeat:no-repeat;
 color:white;
-position:relative;
-overflow:hidden;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:
-radial-gradient(circle at 20% 20%, rgba(22,199,183,.14), transparent 35%),
-radial-gradient(circle at 80% 20%, rgba(43,110,191,.20), transparent 35%);
-pointer-events:none;
-}
-
-.hero > *{
-position:relative;
-z-index:1;
-}
-
-.hero h1{
-font-family:"Playfair Display",serif;
-font-size:clamp(2.6rem,5.5vw,4rem);
-margin:0;
-color:#fff;
-text-shadow:0 10px 30px rgba(0,0,0,.40);
-}
-
-.hero p{
-max-width:700px;
-margin:auto;
-margin-top:.8rem;
-color:rgba(255,255,255,.88);
-font-weight:500;
-line-height:1.7;
-}
-
-.hero-actions{
-margin-top:1.5rem;
-display:flex;
-justify-content:center;
-gap:.6rem;
-flex-wrap:wrap;
-}
-
-.btn{
-padding:.95rem 1.2rem;
-border-radius:999px;
-font-weight:800;
-text-decoration:none;
-display:inline-flex;
-align-items:center;
-justify-content:center;
-transition:.18s ease;
-border:none;
-cursor:pointer;
-}
-
-.btn-primary{
-background:linear-gradient(135deg,#16c7b7,#0d8e9c);
-color:white;
-box-shadow:var(--shadow2);
-}
-
-.btn-primary:hover{
-background:linear-gradient(135deg,#14b5a8,#0b7986);
-transform:translateY(-1px);
-}
-
-.btn-ghost{
-border:1px solid rgba(255,255,255,.22);
-color:white;
-background:rgba(255,255,255,.08);
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-}
-
-.btn-ghost:hover{
-background:rgba(255,255,255,.14);
-transform:translateY(-1px);
 }
 
 .hero-card{
-margin:2rem auto 0;
-max-width:920px;
-background:rgba(10,20,34,.52);
-border:1px solid rgba(255,255,255,.10);
-border-radius:28px;
-box-shadow:0 20px 70px rgba(0,0,0,.32);
-backdrop-filter:blur(14px);
--webkit-backdrop-filter:blur(14px);
-padding:1.2rem;
-}
-
-.hero-chips{
-display:flex;
-justify-content:center;
-gap:.55rem;
-flex-wrap:wrap;
-margin-top:.2rem;
+background:rgba(255,255,255,.06);
+border:1px solid rgba(255,255,255,.12);
 }
 
 .hero-chip{
-display:inline-flex;
-align-items:center;
-gap:.4rem;
-padding:.58rem .78rem;
-border-radius:999px;
 background:rgba(255,255,255,.08);
-border:1px solid rgba(255,255,255,.12);
-color:#fff;
-font-weight:800;
-font-size:.92rem;
-}
-
-.trust-bar{
-margin-top:-20px;
-position:relative;
-z-index:2;
-}
-
-.trust-wrap{
-max-width:1040px;
-margin:0 auto;
-padding:0 1.25rem;
+border:1px solid rgba(255,255,255,.15);
 }
 
 .trust-card{
-background:rgba(15,23,36,.92);
-border:1px solid var(--border);
-border-radius:24px;
-box-shadow:var(--shadow);
-padding:1rem 1.1rem;
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:1rem;
-backdrop-filter:blur(10px);
--webkit-backdrop-filter:blur(10px);
-}
-
-.trust-item{
-text-align:center;
-}
-
-.trust-item strong{
-display:block;
-font-family:"Playfair Display",serif;
-font-size:1.3rem;
-color:#ffffff;
-}
-
-.trust-item span{
-display:block;
-margin-top:.2rem;
-font-size:.92rem;
-font-weight:700;
-color:var(--muted);
-}
-
-section.block{
-margin-top:3rem;
+background:rgba(255,255,255,.06);
 }
 
 .section-head h2{
-font-family:"Playfair Display",serif;
-color:#ffffff;
-margin:0;
-font-size:clamp(1.45rem,2.8vw,1.95rem);
-}
-
-.section-head p{
-color:var(--muted);
-margin:.35rem 0 1rem;
-line-height:1.7;
-}
-
-.grid{
-display:grid;
-grid-template-columns:repeat(12,1fr);
-gap:1rem;
-}
-
-.col-4{grid-column:span 4;}
-.col-6{grid-column:span 6;}
-.col-12{grid-column:span 12;}
-
-.card{
-border:1px solid var(--border);
-border-radius:var(--radius);
-box-shadow:var(--shadow);
-background:linear-gradient(180deg, rgba(15,23,36,.96), rgba(19,32,51,.96));
-overflow:hidden;
-}
-
-.card-pad{
-padding:1.15rem;
-}
-
-.story-wrap{
-display:grid;
-grid-template-columns:repeat(12,1fr);
-gap:1rem;
-align-items:start;
-}
-
-.story-card{grid-column:span 8;}
-.story-side{grid-column:span 4;}
-
-.story-title{
-font-family:"Playfair Display",serif;
-color:#ffffff;
-margin:.1rem 0 .5rem;
-font-size:1.5rem;
+color:white;
 }
 
 .story-p{
 color:var(--muted);
-line-height:1.8;
-margin:.65rem 0 0;
-font-weight:600;
 }
 
-.quote{
-border:1px solid rgba(22,199,183,.18);
-background:
-radial-gradient(700px 240px at 15% 0%, rgba(22,199,183,.10), transparent 55%),
-rgba(15,23,36,.92);
-border-radius:var(--radius);
-box-shadow:0 20px 70px rgba(0,0,0,.20);
-padding:1.05rem 1.1rem;
-}
-
-.quote strong{
-display:block;
-color:#ffffff;
-font-weight:900;
-margin-bottom:.3rem;
-}
-
-.quote p{
-margin:0;
-color:var(--muted);
-font-weight:700;
-line-height:1.6;
-}
-
-.tag-wrap{
-display:flex;
-gap:.5rem;
-flex-wrap:wrap;
-margin-top:.85rem;
+.card{
+border:1px solid rgba(255,255,255,.08);
+background:rgba(20,35,55,.70);
 }
 
 .tag{
-display:inline-flex;
-padding:.5rem .75rem;
-background:rgba(22,199,183,.08);
-border-radius:999px;
-font-weight:800;
-color:#b9fff7;
-border:1px solid rgba(22,199,183,.16);
-}
-
-.names-list{
-list-style:none;
-padding:0;
-margin:0;
-display:grid;
-gap:.55rem;
+background:rgba(45,227,210,.12);
+color:#d9fffb;
 }
 
 .names-list li{
-padding:.78rem .9rem;
-background:rgba(255,255,255,.03);
-border-radius:14px;
-display:flex;
-justify-content:space-between;
-align-items:center;
-gap:10px;
-border:1px solid rgba(255,255,255,.06);
-font-weight:800;
-color:var(--text);
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
 }
 
 .pill{
-font-size:.82rem;
-font-weight:900;
-padding:.3rem .55rem;
-border-radius:999px;
-background:rgba(22,199,183,.10);
-color:#b9fff7;
-border:1px solid rgba(22,199,183,.16);
-white-space:nowrap;
-}
-
-.timeline{
-list-style:none;
-margin:0;
-padding:0;
-display:flex;
-flex-direction:column;
-gap:.8rem;
-}
-
-.event{
-display:flex;
-gap:.85rem;
-align-items:flex-start;
-padding:.95rem;
-border-radius:18px;
-border:1px solid rgba(22,199,183,.10);
-background:rgba(22,199,183,.04);
-}
-
-.event .time{
-min-width:110px;
-font-weight:900;
-color:#ffffff;
-}
-
-.event .meta strong{
-display:block;
-font-weight:900;
-color:#ffffff;
-margin-bottom:.12rem;
-}
-
-.event .meta span{
-color:var(--muted);
-font-weight:650;
-line-height:1.55;
-display:block;
-}
-
-.stat-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:1rem;
-margin-top:1rem;
-}
-
-.stat-card{
-background:white;
-border:1px solid var(--border);
-border-radius:var(--radius);
-padding:1rem;
-text-align:center;
-box-shadow:0 16px 44px rgba(0,0,0,.08);
-}
-
-.stat-card strong{
-display:block;
-font-size:1.7rem;
-color:var(--green);
-font-family:"Playfair Display",serif;
-}
-
-.stat-card span{
-display:block;
-margin-top:.25rem;
-color:var(--muted);
-font-weight:700;
-}
-
-.contact-highlight{
-margin-bottom:1rem;
-padding:1rem;
-border-radius:18px;
-background:
-radial-gradient(700px 240px at 12% 0%, rgba(22,199,183,.10), transparent 55%),
-rgba(22,199,183,.04);
-border:1px solid rgba(22,199,183,.12);
-}
-
-.contact-highlight strong{
-display:block;
-color:#ffffff;
-font-size:1.05rem;
-margin-bottom:.25rem;
-}
-
-.contact-highlight p{
-margin:0;
-color:var(--muted);
-font-weight:650;
-line-height:1.7;
+background:rgba(45,227,210,.18);
+color:#e6fffc;
+border:1px solid rgba(45,227,210,.25);
 }
 
 input,textarea{
-width:100%;
-padding:.95rem 1rem;
-border-radius:14px;
-border:1px solid var(--border);
-font-family:inherit;
-font-size:1rem;
-box-sizing:border-box;
-background:#0b1523;
-color:var(--text);
+background:#0f1e30;
+color:white;
+border:1px solid rgba(255,255,255,.12);
 }
 
 input::placeholder, textarea::placeholder{
-color:#6f859d;
-}
-
-textarea{
-min-height:140px;
-resize:vertical;
+color:#9bb2c8;
 }
 
 label{
-display:block;
-font-weight:900;
 color:#ffffff;
-margin-bottom:.45rem;
-}
-
-footer{
-text-align:center;
-padding:2rem;
-color:var(--muted);
-position:relative;
-z-index:1;
 }
 
 .headshot-wrap{
 display:flex;
 justify-content:center;
-align-items:center;
-padding:1rem 0;
 }
 
 .headshot-frame{
 width:260px;
 height:260px;
 border-radius:50%;
-padding:8px;
-background:linear-gradient(135deg,#16c7b7,#12395b);
-box-shadow:0 18px 50px rgba(0,0,0,.35);
+padding:6px;
+background:linear-gradient(135deg,#2de3d2,#1c4d77);
 }
 
 .headshot-frame img{
 width:100%;
 height:100%;
-display:block;
-border-radius:50%;
 object-fit:cover;
-object-position:center;
-border:4px solid rgba(255,255,255,.08);
-background:#0c1624;
-}
-
-.founder-meta{
-display:flex;
-flex-wrap:wrap;
-gap:.5rem;
-margin:.35rem 0 .9rem;
-}
-
-.founder-meta .pill{
-font-size:.8rem;
+border-radius:50%;
 }
 
 .credential-stack{
@@ -625,62 +180,30 @@ padding-top:1rem;
 border-top:1px solid rgba(255,255,255,.08);
 }
 
-.credential-stack h4{
-margin:0 0 .75rem;
-font-size:1rem;
-color:#ffffff;
-}
-
 .credential-grid{
 display:grid;
-grid-template-columns:repeat(2,minmax(0,1fr));
-gap:.65rem;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:.7rem;
 }
 
 .credential-item{
-padding:.72rem .8rem;
+padding:.7rem;
 border-radius:14px;
-background:rgba(255,255,255,.03);
-border:1px solid rgba(255,255,255,.06);
-color:var(--text);
+background:rgba(255,255,255,.05);
+border:1px solid rgba(255,255,255,.08);
 font-weight:700;
-line-height:1.45;
 }
 
 .credential-item small{
 display:block;
 margin-top:.2rem;
 color:var(--muted);
-font-weight:700;
 }
 
-@media(max-width:900px){
-.col-4,.col-6{grid-column:span 12;}
-.story-card,.story-side{grid-column:span 12;}
-.stat-grid{grid-template-columns:1fr;}
-.trust-card{grid-template-columns:1fr 1fr;}
-.credential-grid{grid-template-columns:1fr;}
-}
-
-@media(max-width:640px){
-.nav{
-flex-direction:column;
-align-items:flex-start;
-gap:.8rem;
-}
-.nav-links{
-width:100%;
-}
-.trust-card{
-grid-template-columns:1fr;
-}
-.hero{
-padding:4rem 1rem 2rem;
-}
-.headshot-frame{
-width:220px;
-height:220px;
-}
+footer{
+text-align:center;
+padding:2rem;
+color:#b8cbe0;
 }
 
 </style>
@@ -718,148 +241,9 @@ We deliver practical cybersecurity consulting, vulnerability assessments,
 cloud security guidance, and clear risk-based recommendations for growing businesses.
 </p>
 
-<div class="hero-actions">
-<a class="btn btn-primary" href="#contact">Book a Consultation</a>
-<a class="btn btn-ghost" href="#services">View Services</a>
-</div>
-
-<div class="hero-card">
-<div class="hero-chips">
-<div class="hero-chip">🔐 Risk Assessments</div>
-<div class="hero-chip">🛡️ Vulnerability Reviews</div>
-<div class="hero-chip">☁️ Cloud Security</div>
-<div class="hero-chip">📋 Compliance Support</div>
-</div>
-</div>
-
 </header>
 
-<section class="trust-bar">
-<div class="trust-wrap">
-<div class="trust-card">
-<div class="trust-item">
-<strong>Security</strong>
-<span>Risk-driven consulting</span>
-</div>
-<div class="trust-item">
-<strong>Cloud</strong>
-<span>Review and guidance</span>
-</div>
-<div class="trust-item">
-<strong>Clear</strong>
-<span>Business-focused reporting</span>
-</div>
-<div class="trust-item">
-<strong>Practical</strong>
-<span>Recommendations you can use</span>
-</div>
-</div>
-</div>
-</section>
-
 <main class="container">
-
-<section id="services" class="block">
-
-<div class="section-head">
-<h2>Services</h2>
-<p>Core cybersecurity services designed to help businesses identify and reduce risk.</p>
-</div>
-
-<div class="grid">
-
-<div class="card col-4">
-<div class="card-pad">
-<h3>Cybersecurity Risk Assessments</h3>
-<p class="story-p">Identify weaknesses across systems, processes, and access controls so you understand your biggest security risks clearly.</p>
-</div>
-</div>
-
-<div class="card col-4">
-<div class="card-pad">
-<h3>Vulnerability Assessments</h3>
-<p class="story-p">Review infrastructure and configurations for vulnerabilities and weak points before they become real threats.</p>
-</div>
-</div>
-
-<div class="card col-4">
-<div class="card-pad">
-<h3>Cloud Security Reviews</h3>
-<p class="story-p">Evaluate cloud environments for misconfigurations, access issues, and identity risks that expose the business.</p>
-</div>
-</div>
-
-<div class="card col-4">
-<div class="card-pad">
-<h3>Security Policy Development</h3>
-<p class="story-p">Develop practical policies and standards aligned to security best practices and business operations.</p>
-</div>
-</div>
-
-<div class="card col-4">
-<div class="card-pad">
-<h3>Small Business Security Consulting</h3>
-<p class="story-p">Get expert cybersecurity guidance without needing a full-time security team inside the company.</p>
-</div>
-</div>
-
-<div class="card col-4">
-<div class="card-pad">
-<h3>Security Awareness Guidance</h3>
-<p class="story-p">Improve security culture with practical guidance around phishing, passwords, user behavior, and everyday cyber hygiene.</p>
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section id="about" class="block">
-
-<div class="section-head">
-<h2>Why Bully Cyber Security</h2>
-<p>Practical cybersecurity guidance for organizations that need clarity, not confusion.</p>
-</div>
-
-<div class="story-wrap">
-
-<div class="story-card card">
-<div class="card-pad">
-
-<h3 class="story-title">Practical cybersecurity guidance</h3>
-
-<p class="story-p">
-Bully Cyber Security was built to help businesses understand their cybersecurity risks and
-take meaningful action to reduce them.
-</p>
-
-<p class="story-p">
-Instead of overwhelming organizations with technical jargon, we focus on clear findings,
-practical next steps, and recommendations that make sense for real business environments.
-</p>
-
-<p class="story-p">
-Whether your business needs a risk assessment, a vulnerability review, cloud guidance,
-or better security structure, the goal stays the same: help you find risks before threats do.
-</p>
-
-</div>
-</div>
-
-<div class="story-side quote">
-<strong>Focus Areas</strong>
-<p>Business-focused cybersecurity support with practical, risk-based direction.</p>
-
-<div class="tag-wrap">
-<span class="tag">Risk Assessments</span>
-<span class="tag">Cloud Security</span>
-<span class="tag">Vulnerability Management</span>
-</div>
-</div>
-
-</div>
-
-</section>
 
 <section id="credentials" class="block">
 
@@ -871,11 +255,13 @@ or better security structure, the goal stays the same: help you find risks befor
 <div class="story-wrap">
 
 <div class="story-side">
+
 <div class="headshot-wrap">
 <div class="headshot-frame">
 <img src="headshot.jpg" alt="Berne Bully headshot">
 </div>
 </div>
+
 </div>
 
 <div class="story-card card">
@@ -883,233 +269,87 @@ or better security structure, the goal stays the same: help you find risks befor
 
 <h3 class="story-title">Berne Bully, M.S. Cybersecurity — Founder</h3>
 
-<div class="founder-meta">
-<span class="pill">Cybersecurity Consultant</span>
-<span class="pill">Risk & Vulnerability Specialist</span>
-<span class="pill">Cloud Security</span>
-</div>
-
 <p class="story-p">
-Cybersecurity professional with experience in vulnerability management,
-risk assessments, cloud security, compliance support, and security operations.
+Cybersecurity professional specializing in risk assessments, vulnerability management,
+cloud security, and compliance consulting for growing organizations.
 </p>
-
-<p class="story-p">
-Bully Cyber Security was created to help growing businesses get real cybersecurity guidance
-without the enterprise-level confusion, inflated consulting model, or unnecessary complexity.
-</p>
-
-<p class="story-p">
-The focus is simple: clear findings, stronger defenses, and practical next steps
-that businesses can actually implement.
-</p>
-
-<div class="tag-wrap">
-<span class="tag">Security Engineering</span>
-<span class="tag">Risk Assessments</span>
-<span class="tag">Cloud Security</span>
-<span class="tag">M.S. Cybersecurity</span>
-</div>
 
 <div class="credential-stack">
-<h4>Education & Certifications</h4>
+<h4>Education & Professional Certifications</h4>
+
 <div class="credential-grid">
-<div class="credential-item">Master of Science in Cybersecurity<small>Graduate Degree</small></div>
-<div class="credential-item">Certified Information Security Manager (CISM)<small>ISACA</small></div>
-<div class="credential-item">CompTIA Advanced Security Practitioner (CASP+)<small>CompTIA</small></div>
-<div class="credential-item">CompTIA Cybersecurity Analyst (CySA+)<small>CompTIA</small></div>
-<div class="credential-item">CompTIA PenTest+<small>CompTIA</small></div>
-<div class="credential-item">CompTIA Security+<small>CompTIA</small></div>
-<div class="credential-item">Microsoft Azure Security Engineer<small>Microsoft</small></div>
-</div>
+
+<div class="credential-item">
+Master of Science in Cybersecurity
+<small>Graduate Degree</small>
 </div>
 
-</div>
-</div>
-
-</div>
-
-</section>
-
-<section class="block">
-
-<div class="section-head">
-<h2>Certifications</h2>
-<p>Industry-recognized certifications that strengthen credibility and trust.</p>
+<div class="credential-item">
+Bachelor of Science in Information Technology
+<small>Undergraduate Degree</small>
 </div>
 
-<div class="card">
-<div class="card-pad">
-
-<ul class="names-list">
-<li><span>Certified Information Security Manager (CISM)</span><span class="pill">ISACA</span></li>
-<li><span>CompTIA Advanced Security Practitioner (CASP+)</span><span class="pill">CompTIA</span></li>
-<li><span>CompTIA Cybersecurity Analyst (CySA+)</span><span class="pill">CompTIA</span></li>
-<li><span>CompTIA PenTest+</span><span class="pill">CompTIA</span></li>
-<li><span>CompTIA Security+</span><span class="pill">CompTIA</span></li>
-<li><span>Microsoft Azure Security Engineer</span><span class="pill">Microsoft</span></li>
-</ul>
-
-</div>
+<div class="credential-item">
+Associate of Science in Business Management
+<small>Business & Management</small>
 </div>
 
-</section>
-
-<section class="block">
-
-<div class="section-head">
-<h2>Why Clients Work With Us</h2>
-<p>Security guidance that is clear, practical, and aligned to business reality.</p>
+<div class="credential-item">
+AWS Certified Security – Specialty
+<small>AWS</small>
 </div>
 
-<div class="grid">
-
-<div class="card col-4">
-<div class="card-pad">
-<h3>Practical Recommendations</h3>
-<p class="story-p">We focus on actions your business can actually take, not generic advice or overwhelming technical jargon.</p>
-</div>
+<div class="credential-item">
+Certified Information Systems Auditor (CISA)
+<small>ISACA</small>
 </div>
 
-<div class="card col-4">
-<div class="card-pad">
-<h3>Professional Security Experience</h3>
-<p class="story-p">Built on real cybersecurity experience across risk, vulnerability management, cloud security, and security program support.</p>
-</div>
+<div class="credential-item">
+Certified Information Security Manager (CISM)
+<small>ISACA</small>
 </div>
 
-<div class="card col-4">
-<div class="card-pad">
-<h3>Clear Reporting</h3>
-<p class="story-p">Clients receive clear findings, business-focused summaries, and prioritized next steps they can understand and use.</p>
+<div class="credential-item">
+CompTIA Advanced Security Practitioner (CASP+)
+<small>CompTIA</small>
+</div>
+
+<div class="credential-item">
+CompTIA Cybersecurity Analyst (CySA+)
+<small>CompTIA</small>
+</div>
+
+<div class="credential-item">
+CompTIA PenTest+
+<small>CompTIA</small>
+</div>
+
+<div class="credential-item">
+CompTIA Security+
+<small>CompTIA</small>
+</div>
+
+<div class="credential-item">
+Microsoft Azure Security Technologies (AZ-500)
+<small>Microsoft</small>
+</div>
+
+<div class="credential-item">
+Microsoft Security Operations Analyst (SC-200)
+<small>Microsoft</small>
+</div>
+
+<div class="credential-item">
+Microsoft Security, Compliance & Identity Fundamentals (SC-900)
+<small>Microsoft</small>
+</div>
+
 </div>
 </div>
 
 </div>
-
-</section>
-
-<section class="block">
-
-<div class="section-head">
-<h2>What You Receive</h2>
-<p>Every engagement is designed to leave you with clarity, direction, and a stronger security foundation.</p>
 </div>
 
-<div class="card">
-<div class="card-pad">
-
-<ul class="names-list">
-<li><span>Security risk summary</span><span class="pill">Included</span></li>
-<li><span>Detailed findings report</span><span class="pill">Included</span></li>
-<li><span>Prioritized recommendations</span><span class="pill">Included</span></li>
-<li><span>Business-focused action plan</span><span class="pill">Included</span></li>
-<li><span>Optional follow-up consulting</span><span class="pill">Available</span></li>
-</ul>
-
-</div>
-</div>
-
-</section>
-
-<section id="process" class="block">
-
-<div class="section-head">
-<h2>How It Works</h2>
-<p>A simple process designed to give your business clarity and practical next steps.</p>
-</div>
-
-<div class="card">
-<div class="card-pad">
-
-<ul class="timeline">
-
-<li class="event">
-<div class="time">Step 1</div>
-<div class="meta">
-<strong>Consultation</strong>
-<span>We discuss your environment, business needs, and current cybersecurity concerns.</span>
-</div>
-</li>
-
-<li class="event">
-<div class="time">Step 2</div>
-<div class="meta">
-<strong>Assessment</strong>
-<span>We review systems, processes, and risks to identify security gaps and opportunities for improvement.</span>
-</div>
-</li>
-
-<li class="event">
-<div class="time">Step 3</div>
-<div class="meta">
-<strong>Findings Report</strong>
-<span>You receive a clear breakdown of risks, observations, and practical recommendations.</span>
-</div>
-</li>
-
-<li class="event">
-<div class="time">Step 4</div>
-<div class="meta">
-<strong>Next Steps</strong>
-<span>We help prioritize actions so your business can strengthen its security posture with confidence.</span>
-</div>
-</li>
-
-</ul>
-
-</div>
-</div>
-
-</section>
-
-<section id="contact" class="block">
-
-<div class="section-head">
-<h2>Book a Consultation</h2>
-<p>Tell us about your business and security concerns.</p>
-</div>
-
-<div class="card">
-<div class="card-pad">
-
-<div class="contact-highlight">
-<strong>Let’s talk about your security goals</strong>
-<p>
-Whether you need a cybersecurity risk assessment, vulnerability review, cloud security guidance,
-or general consulting support, this is the place to start.
-</p>
-</div>
-
-<form class="grid">
-
-<div class="col-6">
-<label for="name">Name</label>
-<input id="name" placeholder="Your name">
-</div>
-
-<div class="col-6">
-<label for="email">Email</label>
-<input id="email" placeholder="Email address">
-</div>
-
-<div class="col-12">
-<label for="company">Company</label>
-<input id="company" placeholder="Company name">
-</div>
-
-<div class="col-12">
-<label for="message">Message</label>
-<textarea id="message" placeholder="Tell us about your business, your systems, or the cybersecurity support you need"></textarea>
-</div>
-
-<div class="col-12">
-<button class="btn btn-primary" type="submit">Request Consultation</button>
-</div>
-
-</form>
-
-</div>
 </div>
 
 </section>
