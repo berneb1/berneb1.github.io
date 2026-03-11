@@ -18,16 +18,20 @@ content="Bully Cyber Security helps businesses identify risks, uncover vulnerabi
 <style>
 
 :root{
---green:#1f4d43;
---green2:#2f6b5c;
---gold:#c7a84f;
---text:#111a1f;
---muted:#667085;
---border:rgba(0,0,0,.09);
---shadow:0 24px 80px rgba(0,0,0,.10);
---shadow2:0 18px 52px rgba(31,77,67,.18);
+--green:#0b1f33;
+--green2:#12395b;
+--gold:#16c7b7;
+--text:#dce7f3;
+--muted:#8ea3b8;
+--border:rgba(120,160,200,.14);
+--shadow:0 24px 80px rgba(0,0,0,.35);
+--shadow2:0 18px 52px rgba(22,199,183,.16);
 --container:1120px;
 --radius:24px;
+--panel:#0f1724;
+--panel-2:#132033;
+--panel-3:#16263d;
+--white:#ffffff;
 }
 
 html{
@@ -39,10 +43,10 @@ margin:0;
 font-family:"Inter",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
 color:var(--text);
 background:
-radial-gradient(900px 420px at 50% 0%, rgba(31,77,67,.18), transparent 60%),
-radial-gradient(700px 440px at 12% 18%, rgba(199,168,79,.14), transparent 55%),
-radial-gradient(760px 460px at 88% 20%, rgba(47,107,92,.10), transparent 60%),
-linear-gradient(180deg,#f4f8f6,#ffffff 58%);
+radial-gradient(900px 420px at 50% 0%, rgba(18,57,91,.32), transparent 60%),
+radial-gradient(700px 440px at 12% 18%, rgba(22,199,183,.09), transparent 55%),
+radial-gradient(760px 460px at 88% 20%, rgba(38,76,122,.18), transparent 60%),
+linear-gradient(180deg,#08111d,#0c1624 58%, #0a1220 100%);
 overflow-x:hidden;
 }
 
@@ -52,7 +56,7 @@ position:fixed;
 inset:0;
 pointer-events:none;
 z-index:0;
-opacity:.055;
+opacity:.06;
 background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
 background-repeat:repeat;
 }
@@ -74,7 +78,7 @@ border-bottom:1px solid var(--border);
 position:sticky;
 top:0;
 z-index:50;
-background:rgba(255,255,255,.80);
+background:rgba(8,17,29,.84);
 backdrop-filter:blur(14px);
 -webkit-backdrop-filter:blur(14px);
 }
@@ -91,18 +95,19 @@ color:inherit;
 width:44px;
 height:44px;
 border-radius:14px;
-background:linear-gradient(135deg,var(--green),var(--green2));
+background:linear-gradient(135deg,var(--green2),#0d5a8f);
 display:grid;
 place-items:center;
 color:#fff;
 font-weight:800;
-box-shadow:0 16px 40px rgba(31,77,67,.25);
+box-shadow:0 16px 40px rgba(0,0,0,.35);
+border:1px solid rgba(255,255,255,.08);
 }
 
 .brand-copy strong{
 display:block;
 font-family:"Playfair Display",serif;
-color:var(--green);
+color:#ffffff;
 font-size:1.08rem;
 }
 
@@ -128,18 +133,18 @@ transition:.18s ease;
 }
 
 .nav-links a:hover{
-background:rgba(31,77,67,.08);
-color:var(--green);
+background:rgba(22,199,183,.10);
+color:#fff;
 }
 
 .nav-links a.cta{
-background:var(--green);
+background:linear-gradient(135deg,#16c7b7,#0d8e9c);
 color:white;
 box-shadow:var(--shadow2);
 }
 
 .nav-links a.cta:hover{
-background:#163a32;
+background:linear-gradient(135deg,#14b5a8,#0b7986);
 color:white;
 }
 
@@ -147,7 +152,7 @@ color:white;
 text-align:center;
 padding:5rem 1rem 2.5rem;
 background-image:
-linear-gradient(180deg, rgba(7,18,16,.58), rgba(7,18,16,.42)),
+linear-gradient(180deg, rgba(4,10,18,.72), rgba(4,10,18,.62)),
 url("cyber-hero.jpg");
 background-size:cover;
 background-position:center;
@@ -162,8 +167,8 @@ content:"";
 position:absolute;
 inset:0;
 background:
-radial-gradient(circle at 20% 20%, rgba(199,168,79,.18), transparent 35%),
-radial-gradient(circle at 80% 20%, rgba(31,77,67,.20), transparent 35%);
+radial-gradient(circle at 20% 20%, rgba(22,199,183,.14), transparent 35%),
+radial-gradient(circle at 80% 20%, rgba(43,110,191,.20), transparent 35%);
 pointer-events:none;
 }
 
@@ -177,14 +182,14 @@ font-family:"Playfair Display",serif;
 font-size:clamp(2.6rem,5.5vw,4rem);
 margin:0;
 color:#fff;
-text-shadow:0 10px 30px rgba(0,0,0,.28);
+text-shadow:0 10px 30px rgba(0,0,0,.40);
 }
 
 .hero p{
 max-width:700px;
 margin:auto;
 margin-top:.8rem;
-color:rgba(255,255,255,.92);
+color:rgba(255,255,255,.88);
 font-weight:500;
 line-height:1.7;
 }
@@ -206,39 +211,41 @@ display:inline-flex;
 align-items:center;
 justify-content:center;
 transition:.18s ease;
+border:none;
+cursor:pointer;
 }
 
 .btn-primary{
-background:var(--green);
+background:linear-gradient(135deg,#16c7b7,#0d8e9c);
 color:white;
 box-shadow:var(--shadow2);
 }
 
 .btn-primary:hover{
-background:#163a32;
+background:linear-gradient(135deg,#14b5a8,#0b7986);
 transform:translateY(-1px);
 }
 
 .btn-ghost{
-border:1px solid rgba(255,255,255,.28);
+border:1px solid rgba(255,255,255,.22);
 color:white;
-background:rgba(255,255,255,.10);
+background:rgba(255,255,255,.08);
 backdrop-filter:blur(10px);
 -webkit-backdrop-filter:blur(10px);
 }
 
 .btn-ghost:hover{
-background:rgba(255,255,255,.16);
+background:rgba(255,255,255,.14);
 transform:translateY(-1px);
 }
 
 .hero-card{
 margin:2rem auto 0;
 max-width:920px;
-background:rgba(255,255,255,.16);
-border:1px solid rgba(255,255,255,.18);
+background:rgba(10,20,34,.52);
+border:1px solid rgba(255,255,255,.10);
 border-radius:28px;
-box-shadow:0 20px 70px rgba(0,0,0,.22);
+box-shadow:0 20px 70px rgba(0,0,0,.32);
 backdrop-filter:blur(14px);
 -webkit-backdrop-filter:blur(14px);
 padding:1.2rem;
@@ -258,8 +265,8 @@ align-items:center;
 gap:.4rem;
 padding:.58rem .78rem;
 border-radius:999px;
-background:rgba(255,255,255,.12);
-border:1px solid rgba(255,255,255,.18);
+background:rgba(255,255,255,.08);
+border:1px solid rgba(255,255,255,.12);
 color:#fff;
 font-weight:800;
 font-size:.92rem;
@@ -278,7 +285,7 @@ padding:0 1.25rem;
 }
 
 .trust-card{
-background:rgba(255,255,255,.86);
+background:rgba(15,23,36,.92);
 border:1px solid var(--border);
 border-radius:24px;
 box-shadow:var(--shadow);
@@ -298,7 +305,7 @@ text-align:center;
 display:block;
 font-family:"Playfair Display",serif;
 font-size:1.3rem;
-color:var(--green);
+color:#ffffff;
 }
 
 .trust-item span{
@@ -315,7 +322,7 @@ margin-top:3rem;
 
 .section-head h2{
 font-family:"Playfair Display",serif;
-color:var(--green);
+color:#ffffff;
 margin:0;
 font-size:clamp(1.45rem,2.8vw,1.95rem);
 }
@@ -340,7 +347,7 @@ gap:1rem;
 border:1px solid var(--border);
 border-radius:var(--radius);
 box-shadow:var(--shadow);
-background:rgba(255,255,255,.84);
+background:linear-gradient(180deg, rgba(15,23,36,.96), rgba(19,32,51,.96));
 overflow:hidden;
 }
 
@@ -352,6 +359,7 @@ padding:1.15rem;
 display:grid;
 grid-template-columns:repeat(12,1fr);
 gap:1rem;
+align-items:start;
 }
 
 .story-card{grid-column:span 8;}
@@ -359,7 +367,7 @@ gap:1rem;
 
 .story-title{
 font-family:"Playfair Display",serif;
-color:var(--green);
+color:#ffffff;
 margin:.1rem 0 .5rem;
 font-size:1.5rem;
 }
@@ -372,18 +380,18 @@ font-weight:600;
 }
 
 .quote{
-border:1px solid rgba(199,168,79,.28);
+border:1px solid rgba(22,199,183,.18);
 background:
-radial-gradient(700px 240px at 15% 0%, rgba(199,168,79,.18), transparent 55%),
-rgba(255,255,255,.90);
+radial-gradient(700px 240px at 15% 0%, rgba(22,199,183,.10), transparent 55%),
+rgba(15,23,36,.92);
 border-radius:var(--radius);
-box-shadow:0 20px 70px rgba(0,0,0,.09);
+box-shadow:0 20px 70px rgba(0,0,0,.20);
 padding:1.05rem 1.1rem;
 }
 
 .quote strong{
 display:block;
-color:var(--green);
+color:#ffffff;
 font-weight:900;
 margin-bottom:.3rem;
 }
@@ -405,11 +413,11 @@ margin-top:.85rem;
 .tag{
 display:inline-flex;
 padding:.5rem .75rem;
-background:#eef3f2;
+background:rgba(22,199,183,.08);
 border-radius:999px;
 font-weight:800;
-color:var(--green);
-border:1px solid rgba(31,77,67,.08);
+color:#b9fff7;
+border:1px solid rgba(22,199,183,.16);
 }
 
 .names-list{
@@ -422,14 +430,15 @@ gap:.55rem;
 
 .names-list li{
 padding:.78rem .9rem;
-background:#fafafa;
+background:rgba(255,255,255,.03);
 border-radius:14px;
 display:flex;
 justify-content:space-between;
 align-items:center;
 gap:10px;
-border:1px solid rgba(0,0,0,.05);
+border:1px solid rgba(255,255,255,.06);
 font-weight:800;
+color:var(--text);
 }
 
 .pill{
@@ -437,9 +446,9 @@ font-size:.82rem;
 font-weight:900;
 padding:.3rem .55rem;
 border-radius:999px;
-background:rgba(31,77,67,.06);
-color:var(--green);
-border:1px solid rgba(31,77,67,.10);
+background:rgba(22,199,183,.10);
+color:#b9fff7;
+border:1px solid rgba(22,199,183,.16);
 white-space:nowrap;
 }
 
@@ -458,20 +467,20 @@ gap:.85rem;
 align-items:flex-start;
 padding:.95rem;
 border-radius:18px;
-border:1px solid rgba(31,77,67,.10);
-background:rgba(31,77,67,.04);
+border:1px solid rgba(22,199,183,.10);
+background:rgba(22,199,183,.04);
 }
 
 .event .time{
 min-width:110px;
 font-weight:900;
-color:var(--green);
+color:#ffffff;
 }
 
 .event .meta strong{
 display:block;
 font-weight:900;
-color:var(--text);
+color:#ffffff;
 margin-bottom:.12rem;
 }
 
@@ -517,14 +526,14 @@ margin-bottom:1rem;
 padding:1rem;
 border-radius:18px;
 background:
-radial-gradient(700px 240px at 12% 0%, rgba(199,168,79,.18), transparent 55%),
-rgba(31,77,67,.04);
-border:1px solid rgba(31,77,67,.10);
+radial-gradient(700px 240px at 12% 0%, rgba(22,199,183,.10), transparent 55%),
+rgba(22,199,183,.04);
+border:1px solid rgba(22,199,183,.12);
 }
 
 .contact-highlight strong{
 display:block;
-color:var(--green);
+color:#ffffff;
 font-size:1.05rem;
 margin-bottom:.25rem;
 }
@@ -544,7 +553,12 @@ border:1px solid var(--border);
 font-family:inherit;
 font-size:1rem;
 box-sizing:border-box;
-background:#fff;
+background:#0b1523;
+color:var(--text);
+}
+
+input::placeholder, textarea::placeholder{
+color:#6f859d;
 }
 
 textarea{
@@ -555,7 +569,7 @@ resize:vertical;
 label{
 display:block;
 font-weight:900;
-color:var(--green);
+color:#ffffff;
 margin-bottom:.45rem;
 }
 
@@ -567,11 +581,85 @@ position:relative;
 z-index:1;
 }
 
+.headshot-wrap{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:1rem 0;
+}
+
+.headshot-frame{
+width:260px;
+height:260px;
+border-radius:50%;
+padding:8px;
+background:linear-gradient(135deg,#16c7b7,#12395b);
+box-shadow:0 18px 50px rgba(0,0,0,.35);
+}
+
+.headshot-frame img{
+width:100%;
+height:100%;
+display:block;
+border-radius:50%;
+object-fit:cover;
+object-position:center;
+border:4px solid rgba(255,255,255,.08);
+background:#0c1624;
+}
+
+.founder-meta{
+display:flex;
+flex-wrap:wrap;
+gap:.5rem;
+margin:.35rem 0 .9rem;
+}
+
+.founder-meta .pill{
+font-size:.8rem;
+}
+
+.credential-stack{
+margin-top:1rem;
+padding-top:1rem;
+border-top:1px solid rgba(255,255,255,.08);
+}
+
+.credential-stack h4{
+margin:0 0 .75rem;
+font-size:1rem;
+color:#ffffff;
+}
+
+.credential-grid{
+display:grid;
+grid-template-columns:repeat(2,minmax(0,1fr));
+gap:.65rem;
+}
+
+.credential-item{
+padding:.72rem .8rem;
+border-radius:14px;
+background:rgba(255,255,255,.03);
+border:1px solid rgba(255,255,255,.06);
+color:var(--text);
+font-weight:700;
+line-height:1.45;
+}
+
+.credential-item small{
+display:block;
+margin-top:.2rem;
+color:var(--muted);
+font-weight:700;
+}
+
 @media(max-width:900px){
 .col-4,.col-6{grid-column:span 12;}
 .story-card,.story-side{grid-column:span 12;}
 .stat-grid{grid-template-columns:1fr;}
 .trust-card{grid-template-columns:1fr 1fr;}
+.credential-grid{grid-template-columns:1fr;}
 }
 
 @media(max-width:640px){
@@ -588,6 +676,10 @@ grid-template-columns:1fr;
 }
 .hero{
 padding:4rem 1rem 2rem;
+}
+.headshot-frame{
+width:220px;
+height:220px;
 }
 }
 
@@ -779,13 +871,23 @@ or better security structure, the goal stays the same: help you find risks befor
 <div class="story-wrap">
 
 <div class="story-side">
-<img src="headshot.jpg" alt="Berne Bully headshot" style="width:100%;border-radius:18px;box-shadow:var(--shadow);display:block;">
+<div class="headshot-wrap">
+<div class="headshot-frame">
+<img src="headshot.jpg" alt="Berne Bully headshot">
+</div>
+</div>
 </div>
 
 <div class="story-card card">
 <div class="card-pad">
 
-<h3 class="story-title">Berne Bully — Founder</h3>
+<h3 class="story-title">Berne Bully, M.S. Cybersecurity — Founder</h3>
+
+<div class="founder-meta">
+<span class="pill">Cybersecurity Consultant</span>
+<span class="pill">Risk & Vulnerability Specialist</span>
+<span class="pill">Cloud Security</span>
+</div>
 
 <p class="story-p">
 Cybersecurity professional with experience in vulnerability management,
@@ -806,6 +908,20 @@ that businesses can actually implement.
 <span class="tag">Security Engineering</span>
 <span class="tag">Risk Assessments</span>
 <span class="tag">Cloud Security</span>
+<span class="tag">M.S. Cybersecurity</span>
+</div>
+
+<div class="credential-stack">
+<h4>Education & Certifications</h4>
+<div class="credential-grid">
+<div class="credential-item">Master of Science in Cybersecurity<small>Graduate Degree</small></div>
+<div class="credential-item">Certified Information Security Manager (CISM)<small>ISACA</small></div>
+<div class="credential-item">CompTIA Advanced Security Practitioner (CASP+)<small>CompTIA</small></div>
+<div class="credential-item">CompTIA Cybersecurity Analyst (CySA+)<small>CompTIA</small></div>
+<div class="credential-item">CompTIA PenTest+<small>CompTIA</small></div>
+<div class="credential-item">CompTIA Security+<small>CompTIA</small></div>
+<div class="credential-item">Microsoft Azure Security Engineer<small>Microsoft</small></div>
+</div>
 </div>
 
 </div>
