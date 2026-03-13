@@ -550,6 +550,36 @@
       display: block;
     }
 
+    .stat-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+
+    .stat-card {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.08);
+    }
+
+    .stat-card strong {
+      display: block;
+      font-size: 1.7rem;
+      color: var(--green);
+      font-family: "Playfair Display", serif;
+    }
+
+    .stat-card span {
+      display: block;
+      margin-top: 0.25rem;
+      color: var(--muted);
+      font-weight: 700;
+    }
+
     .contact-highlight {
       margin-bottom: 1rem;
       padding: 1rem;
@@ -597,6 +627,36 @@
 
     .mobile-call:hover {
       background: #174b74;
+    }
+
+    input,
+    textarea {
+      width: 100%;
+      padding: 0.95rem 1rem;
+      border-radius: 14px;
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      font-family: inherit;
+      font-size: 1rem;
+      box-sizing: border-box;
+      background: rgba(255, 255, 255, 0.96);
+      color: #16324f;
+    }
+
+    textarea {
+      min-height: 140px;
+      resize: vertical;
+    }
+
+    input::placeholder,
+    textarea::placeholder {
+      color: #6d87a1;
+    }
+
+    label {
+      display: block;
+      font-weight: 900;
+      color: #ffffff;
+      margin-bottom: 0.45rem;
     }
 
     footer {
@@ -682,10 +742,27 @@
     }
 
     @media (max-width: 900px) {
-      .col-4 { grid-column: span 12; }
-      .story-card, .story-side { grid-column: span 12; }
-      .trust-card { grid-template-columns: 1fr 1fr; }
-      .credential-grid { grid-template-columns: 1fr; }
+      .col-4,
+      .col-6 {
+        grid-column: span 12;
+      }
+
+      .story-card,
+      .story-side {
+        grid-column: span 12;
+      }
+
+      .stat-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .trust-card {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .credential-grid {
+        grid-template-columns: 1fr;
+      }
     }
 
     @media (max-width: 640px) {
