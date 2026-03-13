@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -624,6 +623,7 @@
       text-decoration: none;
       box-shadow: 0 10px 30px rgba(0,0,0,0.25);
       z-index: 999;
+      white-space: nowrap;
     }
 
     .mobile-call:hover {
@@ -875,7 +875,8 @@
       <a href="mailto:berneb@bullycyber.com">berneb@bullycyber.com</a>
       <span>•</span>
       <a href="tel:4079065796">407-906-5796</a>
-      <a class="btn btn-primary" href="#contact">Request Help</a>
+      <a class="btn btn-primary" href="tel:4079065796">Call Now</a>
+      <a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">Send Email</a>
     </div>
   </header>
 
@@ -1072,14 +1073,14 @@
         <div class="story-side">
           <div class="headshot-wrap">
             <div class="headshot-frame">
-              <img src="headshot.jpg" alt="Berne Bully headshot" />
+              <img src="headshot.jpg" alt="Berne Bully Jr headshot" />
             </div>
           </div>
         </div>
 
         <div class="story-card card">
           <div class="card-pad">
-            <h3 class="story-title">Berne Bully, M.S. Cybersecurity — Founder</h3>
+            <h3 class="story-title">Berne Bully Jr, M.S. Cybersecurity — Founder</h3>
 
             <div class="founder-meta">
               <span class="pill">Small Business IT Support</span>
@@ -1103,6 +1104,9 @@
             </p>
 
             <div class="credential-stack"> <h4>Education &amp; Professional Certifications</h4> <div class="credential-grid"> <div class="credential-item"> Master of Science in Cybersecurity <small>Western Governors University</small> </div> <div class="credential-item"> Bachelor of Science in Information Technology <small>Clayton State University</small> </div> <div class="credential-item"> Associate of Science in Business Management <small>Southern Crescent Tech</small> </div> <div class="credential-item"> AWS Certified Security – Specialty <small>AWS</small> </div> <div class="credential-item"> Certified Information Systems Auditor (CISA) <small>ISACA</small> </div> <div class="credential-item"> Certified Information Security Manager (CISM) <small>ISACA</small> </div> <div class="credential-item"> CompTIA Advanced Security Practitioner (CASP+) <small>CompTIA</small> </div> <div class="credential-item"> CompTIA Cybersecurity Analyst (CySA+) <small>CompTIA</small> </div> <div class="credential-item"> CompTIA PenTest+ <small>CompTIA</small> </div> <div class="credential-item"> CompTIA Security+ <small>CompTIA</small> </div> <div class="credential-item"> Microsoft Azure Security Technologies (AZ-500) <small>Microsoft</small> </div> <div class="credential-item"> Microsoft Security Operations Analyst (SC-200) <small>Microsoft</small> </div> <div class="credential-item"> Microsoft Security, Compliance &amp; Identity Fundamentals (SC-900) <small>Microsoft</small> </div> </div> </div>
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="block">
@@ -1226,7 +1230,7 @@
             </p>
           </div>
 
-          <div style="text-align:center; margin-top:20px;">
+          <div style="text-align:center; margin-top:20px; display:flex; justify-content:center; gap:12px; flex-wrap:wrap;">
             <a class="btn btn-primary" href="tel:4079065796">Call Now</a>
             <a class="btn btn-ghost" href="mailto:berneb@bullycyber.com">Send Email</a>
           </div>
@@ -1239,7 +1243,7 @@
     © <span id="year"></span> Bully Cyber Security
   </footer>
 
-  <a class="mobile-call" href="tel:4079065796">📞 Call for IT Help</a>
+  <a class="mobile-call" href="tel:4079065796">📞 Call Now</a>
 
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
