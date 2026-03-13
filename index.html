@@ -8,7 +8,7 @@
 
   <meta
     name="description"
-    content="Bully Cyber Security helps businesses stay secure, keep their technology running, and protect their systems, email, and data."
+    content="Bully Cyber Security helps small businesses keep their technology secure and running smoothly with practical IT support, email setup, WiFi help, backups, and cybersecurity protection."
   />
 
   <link rel="icon" type="image/png" href="bcs-logo.png" />
@@ -167,7 +167,7 @@
 
     .hero {
       text-align: center;
-      padding: 5rem 1rem 2.5rem;
+      padding: 4.25rem 1rem 2.5rem;
       background-image:
         linear-gradient(180deg, rgba(10, 22, 38, 0.42), rgba(10, 22, 38, 0.28)),
         url("cyber-hero.jpg");
@@ -196,15 +196,15 @@
 
     .hero-logo {
       display: block;
-      width: 110px;
-      max-width: 28vw;
-      margin: 0 auto 1rem;
+      width: 92px;
+      max-width: 24vw;
+      margin: 0 auto 0.85rem;
       filter: drop-shadow(0 10px 24px rgba(0, 0, 0, 0.28));
     }
 
     .hero h1 {
       font-family: "Playfair Display", serif;
-      font-size: clamp(2.6rem, 5.5vw, 4rem);
+      font-size: clamp(2.2rem, 5vw, 3.5rem);
       margin: 0;
       color: #fff;
       font-weight: 700;
@@ -218,12 +218,12 @@
       color: #f5fbff;
       font-weight: 700;
       line-height: 1.8;
-      font-size: 1.05rem;
+      font-size: 1.02rem;
       text-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
     }
 
     .hero-actions {
-      margin-top: 1.5rem;
+      margin-top: 1.25rem;
       display: flex;
       justify-content: center;
       gap: 0.6rem;
@@ -266,7 +266,7 @@
     }
 
     .hero-card {
-      margin: 2rem auto 0;
+      margin: 1.5rem auto 0;
       max-width: 920px;
       background: rgba(255, 255, 255, 0.14);
       border: 1px solid rgba(255, 255, 255, 0.22);
@@ -296,6 +296,34 @@
       color: #fff;
       font-weight: 800;
       font-size: 0.92rem;
+    }
+
+    .contact-strip {
+      max-width: 920px;
+      margin: 1rem auto 0;
+      padding: 0.9rem 1rem;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, 0.14);
+      border: 1px solid rgba(255, 255, 255, 0.22);
+      box-shadow: 0 18px 50px rgba(0, 0, 0, 0.14);
+      backdrop-filter: blur(12px);
+      -webkit-backdrop-filter: blur(12px);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 0.75rem 1rem;
+      flex-wrap: wrap;
+    }
+
+    .contact-strip a,
+    .contact-strip span {
+      color: #ffffff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    .contact-strip a:hover {
+      text-decoration: underline;
     }
 
     .trust-bar {
@@ -742,12 +770,30 @@
       }
 
       .hero {
-        padding: 4rem 1rem 2rem;
+        padding: 3.5rem 1rem 2rem;
+      }
+
+      .hero-logo {
+        width: 82px;
+        margin-bottom: 0.7rem;
+      }
+
+      .hero h1 {
+        font-size: clamp(1.95rem, 8vw, 2.7rem);
+      }
+
+      .hero p {
+        font-size: 0.98rem;
+        line-height: 1.7;
       }
 
       .headshot-frame {
         width: 220px;
         height: 220px;
+      }
+
+      .contact-strip {
+        padding: 0.9rem;
       }
     }
   </style>
@@ -777,14 +823,10 @@
   <header class="hero" id="top">
     <img class="hero-logo" src="bcs-logo.png" alt="BCS logo" />
 
-    <h1>Bully Cyber Security</h1>
+    <h1>Small Business IT Support, Computer Repair, Email Setup, and Security Help</h1>
 
     <p>
-      Helping Businesses Stay Secure and Keep Their Technology Running.
-      We provide cybersecurity consulting, computer support, business email setup,
-      vulnerability assessments, and technology support for small businesses.
-      From protecting your systems to fixing everyday tech issues, Bully Cyber Security
-      helps businesses stay secure, reliable, and productive.
+      We help small businesses fix technology problems, protect their systems, and keep things running smoothly.
     </p>
 
     <div class="hero-actions">
@@ -794,11 +836,20 @@
 
     <div class="hero-card">
       <div class="hero-chips">
-        <div class="hero-chip">🔐 Security & Protection</div>
         <div class="hero-chip">💻 Computer Repair</div>
-        <div class="hero-chip">📧 Business Email Support</div>
-        <div class="hero-chip">⚙️ Small Business Setup</div>
+        <div class="hero-chip">📧 Business Email Setup</div>
+        <div class="hero-chip">📶 WiFi &amp; Network Setup</div>
+        <div class="hero-chip">🛡️ Backup &amp; Data Protection</div>
+        <div class="hero-chip">⚙️ Small Business IT Support</div>
+        <div class="hero-chip">🔐 Security Setup</div>
       </div>
+    </div>
+
+    <div class="contact-strip">
+      <a href="mailto:berneb@bullycyber.com">berneb@bullycyber.com</a>
+      <span>•</span>
+      <span>Phone: Add Your Number</span>
+      <a class="btn btn-primary" href="#contact">Request Help</a>
     </div>
   </header>
 
@@ -835,19 +886,60 @@
       <div class="grid">
         <div class="card col-4">
           <div class="card-pad">
-            <h3>Cybersecurity Risk Assessments</h3>
+            <h3>Computer Repair</h3>
             <p class="story-p">
-              Identify security risks across your computers, networks, and business systems.
-              We help businesses understand where they are vulnerable and how to fix those issues before they become real threats.
+              Fast support for slow computers, software issues, login problems,
+              and technical errors that interrupt business operations.
             </p>
           </div>
         </div>
 
         <div class="card col-4">
           <div class="card-pad">
-            <h3>Vulnerability &amp; Security Reviews</h3>
+            <h3>Business Email Setup</h3>
             <p class="story-p">
-              We analyze systems, devices, and software for security weaknesses so your business can address them before attackers find them.
+              Professional email setup using platforms like Microsoft 365 and Google Workspace.
+              We configure business email, accounts, and access so teams can work efficiently.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>WiFi &amp; Network Setup</h3>
+            <p class="story-p">
+              Setup and support for office WiFi, routers, connectivity, printers, and network basics
+              so your business stays connected and productive.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Backup &amp; Data Protection</h3>
+            <p class="story-p">
+              Protect your business from data loss, downtime, and ransomware with secure backups,
+              recovery planning, and practical protection for everyday business technology.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Small Business IT Support</h3>
+            <p class="story-p">
+              Practical day-to-day IT support for small businesses that need help with computers,
+              user issues, software problems, connectivity, and keeping systems running smoothly.
+            </p>
+          </div>
+        </div>
+
+        <div class="card col-4">
+          <div class="card-pad">
+            <h3>Security Setup</h3>
+            <p class="story-p">
+              Clear guidance to help secure computers, email, cloud accounts, backups, and business systems
+              without unnecessary complexity or confusing technical language.
             </p>
           </div>
         </div>
@@ -856,36 +948,28 @@
           <div class="card-pad">
             <h3>Business Technology Setup</h3>
             <p class="story-p">
-              We help businesses properly set up computers, WiFi networks, printers, and business systems so everything works reliably and securely from day one.
+              We help businesses properly set up computers, WiFi networks, printers, and business systems
+              so everything works reliably and securely from day one.
             </p>
           </div>
         </div>
 
         <div class="card col-4">
           <div class="card-pad">
-            <h3>Business Email Setup &amp; Support</h3>
+            <h3>Cloud &amp; Microsoft 365 Support</h3>
             <p class="story-p">
-              Professional email setup using platforms like Microsoft 365 and Google Workspace.
-              We configure secure business email, accounts, and access controls so teams can work efficiently.
+              Setup and support for Microsoft 365, user accounts, email access, file sharing,
+              permissions, and cloud administration for small business environments.
             </p>
           </div>
         </div>
 
         <div class="card col-4">
           <div class="card-pad">
-            <h3>Computer Repair &amp; Troubleshooting</h3>
+            <h3>Cybersecurity Risk Assessments</h3>
             <p class="story-p">
-              Fast support for computer issues, slow systems, software problems, and technical errors that interrupt business operations.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>Small Business Security &amp; Backup Setup</h3>
-            <p class="story-p">
-              Protect your business from ransomware, data loss, and system failures.
-              We configure secure backups, system protection, and email security to keep your business systems safe and recoverable.
+              Identify security risks across your computers, networks, and business systems.
+              We help businesses understand where they are vulnerable and how to fix issues before they become real threats.
             </p>
           </div>
         </div>
@@ -923,20 +1007,18 @@
             <h3 class="story-title">Practical support for real business needs</h3>
 
             <p class="story-p">
-              Bully Cyber Security was built to help businesses protect their systems, solve technology problems,
-              and keep operations running without unnecessary confusion or downtime.
+              Bully Cyber Security helps small businesses keep their technology secure and running smoothly.
             </p>
 
             <p class="story-p">
-              Instead of overwhelming organizations with technical jargon, we focus on clear findings,
-              practical next steps, and support that makes sense for restaurants, law firms, offices,
-              and other growing small businesses.
+              We provide practical support for computer problems, email setup, WiFi networks, backups,
+              and cybersecurity protection. Our goal is to fix issues quickly, prevent security problems,
+              and make sure your business technology works reliably every day.
             </p>
 
             <p class="story-p">
-              Whether your business needs computer repair, email setup, business technology support,
-              backup protection, or cybersecurity guidance, the goal stays the same:
-              keep your business secure, reliable, and productive.
+              Whether you need help securing your systems or simply getting your technology set up the right way,
+              we provide clear guidance and dependable support.
             </p>
           </div>
         </div>
@@ -948,7 +1030,8 @@
           <div class="tag-wrap">
             <span class="tag">Computer Support</span>
             <span class="tag">Email Setup</span>
-            <span class="tag">Business Security</span>
+            <span class="tag">WiFi Setup</span>
+            <span class="tag">Ransomware Protection</span>
           </div>
         </div>
       </div>
@@ -993,8 +1076,6 @@
               The focus is simple: clear findings, stronger defenses, and practical next steps
               that businesses can actually implement.
             </p>
-
-         
 
             <div class="credential-stack">
               <h4>Education &amp; Professional Certifications</h4>
@@ -1095,7 +1176,7 @@
               <div class="time">Step 2</div>
               <div class="meta">
                 <strong>Assessment</strong>
-                <span>We review systems, devices, email, and business technology to identify problems, risks, and opportunities for improvement.</span>
+                <span>We review systems, devices, email, WiFi, backups, and business technology to identify issues, risks, and opportunities for improvement.</span>
               </div>
             </li>
 
@@ -1130,10 +1211,13 @@
           <div class="contact-highlight">
             <strong>Let’s talk about your business technology and security needs</strong>
             <p>
-              Whether you need computer repair, business email setup, small business technology support,
-              backup protection, or cybersecurity guidance, this is the place to start.
+              Whether you need computer repair, IT support, business email setup,
+              WiFi setup, backup protection, ransomware protection, or cybersecurity guidance,
+              this is the place to start.
               <br /><br />
               Email: berneb@bullycyber.com
+              <br />
+              Phone: Add Your Number
             </p>
           </div>
 
