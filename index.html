@@ -28,32 +28,36 @@
             color: var(--text-main); line-height: 1.6; overflow-x: hidden;
         }
 
-        .container { max-width: 1100px; margin: auto; padding: 2rem 1.25rem; }
+        .container { max-width: 1150px; margin: auto; padding: 2rem 1.25rem; }
 
+        /* --- NAVIGATION: FIXED LARGE LOGO --- */
         .nav {
             display: flex; justify-content: space-between; align-items: center;
-            padding: 1.2rem 5%; position: sticky; top: 0; z-index: 1000;
-            background: rgba(8, 14, 23, 0.9); backdrop-filter: blur(20px);
+            padding: 0.8rem 5%; position: sticky; top: 0; z-index: 1000;
+            background: rgba(8, 14, 23, 0.96); backdrop-filter: blur(20px);
             border-bottom: 1px solid var(--border);
         }
-        .brand { display: flex; align-items: center; gap: 15px; text-decoration: none; color: white; }
+        .brand { display: flex; align-items: center; gap: 20px; text-decoration: none; color: white; }
         
+        /* LOGO SIZE INCREASED TO 85PX */
         .logo-circle { 
-            width: 65px; height: 65px; border: 2px solid var(--accent); 
+            width: 85px; height: 85px; border: 2px solid var(--accent); 
             border-radius: 50%; overflow: hidden; background: #000;
             display: flex; align-items: center; justify-content: center;
-            flex-shrink: 0; box-shadow: 0 0 20px rgba(55, 230, 212, 0.2);
+            flex-shrink: 0; box-shadow: 0 0 25px rgba(55, 230, 212, 0.25);
         }
-        .logo-circle img { width: 80%; height: 80%; object-fit: contain; }
+        .logo-circle img { width: 85%; height: 85%; object-fit: contain; }
 
-        .brand-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.3rem; line-height: 1.1; }
-        .brand-text span { font-size: 0.7rem; color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+        .brand-text strong { display: block; font-family: 'Playfair Display', serif; font-size: 1.5rem; line-height: 1.1; }
+        .brand-text span { font-size: 0.75rem; color: var(--accent); font-weight: 800; text-transform: uppercase; letter-spacing: 1.5px; }
 
+        /* --- HERO --- */
         .hero { padding: 8rem 1.25rem 5rem; text-align: center; max-width: 1000px; margin: auto; }
         .hero-tag { color: var(--accent); font-weight: 900; letter-spacing: 4px; text-transform: uppercase; font-size: 0.85rem; margin-bottom: 1.5rem; }
         .hero h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 8vw, 4.5rem); margin: 0 0 1.5rem; line-height: 1.05; font-weight: 800; }
-        .hero p { font-size: 1.2rem; color: var(--text-dim); margin-bottom: 3rem; max-width: 700px; margin-inline: auto; }
+        .hero p { font-size: 1.25rem; color: var(--text-dim); margin-bottom: 3rem; max-width: 800px; margin-inline: auto; }
 
+        /* --- SERVICES GRID --- */
         .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1.5rem; }
         .card { 
             background: var(--panel); border: 1px solid var(--border); 
@@ -62,28 +66,30 @@
         .card:hover { border-color: var(--accent); transform: translateY(-10px); background: rgba(255,255,255,0.06); }
         .card h3 { color: var(--accent); font-family: 'Playfair Display', serif; font-size: 1.7rem; margin: 0 0 1rem; }
 
-        .about-section { background: rgba(255,255,255,0.02); padding: 5rem 0; border-radius: 50px; margin: 4rem 0; }
-        .about-wrap { display: grid; grid-template-columns: 350px 1fr; gap: 60px; align-items: center; }
-        
-        .headshot-container { text-align: center; }
+        /* --- ABOUT & CERTIFICATIONS --- */
+        .about-section { background: rgba(255,255,255,0.02); padding: 5rem 0; border-radius: 60px; margin: 4rem 0; }
+        .about-wrap { display: grid; grid-template-columns: 380px 1fr; gap: 60px; align-items: flex-start; }
         .headshot-frame { 
-            width: 320px; height: 320px; border-radius: 50%; border: 4px solid var(--accent); 
-            overflow: hidden; margin-bottom: 1.5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
+            width: 350px; height: 350px; border-radius: 50%; border: 5px solid var(--accent); 
+            overflow: hidden; margin: 0 auto 1.5rem; box-shadow: 0 20px 50px rgba(0,0,0,0.5);
         }
         .headshot-frame img { width: 100%; height: 100%; object-fit: cover; }
+        
+        .cert-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-top: 25px; }
+        .cert-tag { background: rgba(255,255,255,0.05); border: 1px solid var(--border); padding: 10px; border-radius: 10px; font-size: 0.75rem; font-weight: 700; text-align: center; color: var(--accent); text-transform: uppercase; }
 
         .btn-linkedin { 
             display: inline-flex; align-items: center; gap: 10px; background: var(--linkedin); 
-            color: white; text-decoration: none; padding: 12px 24px; border-radius: 10px; 
-            font-weight: 700; transition: 0.3s;
+            color: white; text-decoration: none; padding: 12px 24px; border-radius: 12px; 
+            font-weight: 700; transition: 0.3s; width: 100%; justify-content: center;
         }
-        .btn-linkedin:hover { transform: scale(1.05); filter: brightness(1.1); }
 
+        /* --- PRICING --- */
         .price-box { max-width: 850px; margin: 2rem auto; background: #000; padding: 3rem; border-radius: 40px; border: 1px solid var(--border); }
         .price-item { display: flex; justify-content: space-between; padding: 18px 0; border-bottom: 1px solid rgba(255,255,255,0.05); font-weight: 500; }
         .price-value { color: var(--accent); font-family: 'Playfair Display', serif; font-weight: 700; font-size: 1.4rem; }
 
-        .btn { padding: 20px 40px; border-radius: 15px; font-weight: 800; text-decoration: none; display: inline-block; transition: 0.3s; border: none; font-size: 1rem; }
+        .btn { padding: 20px 40px; border-radius: 15px; font-weight: 800; text-decoration: none; display: inline-block; transition: 0.3s; border: none; font-size: 1rem; cursor: pointer;}
         .btn-primary { background: var(--accent); color: #080e17; box-shadow: 0 10px 30px rgba(55, 230, 212, 0.3); }
         .btn-outline { border: 2px solid var(--accent); color: var(--accent); background: transparent; }
 
@@ -96,12 +102,12 @@
         }
 
         @media (max-width: 900px) {
-            .nav { padding: 1rem 1.25rem; }
-            .logo-circle { width: 55px; height: 55px; }
+            .nav { padding: 0.5rem 1rem; }
+            .logo-circle { width: 70px; height: 70px; }
             .brand-text strong { font-size: 1.1rem; }
             .nav .btn-primary { display: none; }
             .about-wrap { grid-template-columns: 1fr; text-align: center; }
-            .headshot-frame { margin: 0 auto 2rem; width: 280px; height: 280px; }
+            .headshot-frame { width: 300px; height: 300px; }
             .mobile-call { display: block; }
         }
     </style>
@@ -116,16 +122,17 @@
                 <span>Expert Repair & Security</span>
             </div>
         </a>
-        <a href="tel:4079065796" class="btn-primary" style="padding: 10px 20px; border-radius: 8px; font-size: 0.8rem; text-decoration: none;">Call Now</a>
+        <a href="tel:4079065796" class="btn-primary" style="padding: 12px 24px; border-radius: 10px; font-size: 0.85rem; text-decoration: none;">Call Now</a>
     </nav>
 
     <header class="hero">
-        <div class="hero-tag">Professional Tech Support</div>
+        <div class="hero-tag">Senior Cybersecurity Engineering</div>
         <h1>The Expert Alternative to <span style="color:var(--accent)">Retail Tech Squads.</span></h1>
-        <p>Skip the lines and the entry-level advice. Get your technology fixed and secured by a Senior Cybersecurity Engineer.</p>
+        <p>Expert computer repair, senior-level IT support, and custom business websites. Lead by a Senior Cybersecurity Engineer with deep experience in the government and commercial sectors.</p>
+        
         <div style="display:flex; justify-content:center; gap:15px; flex-wrap:wrap;">
-            <a href="tel:4079065796" class="btn btn-primary">Book Repair: 407.906.5796</a>
-            <a href="#services" class="btn btn-outline">Explore Services</a>
+            <a href="tel:4079065796" class="btn btn-primary">Book an Expert: 407.906.5796</a>
+            <a href="#about" class="btn btn-outline">Meet Your Engineer</a>
         </div>
     </header>
 
@@ -133,35 +140,43 @@
         
         <section id="services" class="grid">
             <div class="card">
-                <h3>💻 Expert Repair</h3>
-                <p>Hardware diagnostics, slow PC optimization, and new computer setups. Professional engineering for your everyday devices.</p>
+                <h3>💻 Computer Repair</h3>
+                <p>Hardware diagnostics, data recovery, and slow PC optimization. Professional engineering for your home or office devices.</p>
             </div>
             <div class="card">
-                <h3>🏢 Business IT</h3>
-                <p>Managed email (Microsoft 365), secure networking, and business technology strategy for small Florida firms.</p>
+                <h3>🌐 Business Websites</h3>
+                <p>Professional website creation and deployment for local businesses. Secure, fast, and built to turn visitors into customers.</p>
             </div>
             <div class="card">
-                <h3>🛡️ Cybersecurity</h3>
-                <p>Manager-level security audits, malware neutralization, and automated backup systems to protect your livelihood.</p>
+                <h3>🛡️ Managed Security</h3>
+                <p>Enterprise-grade malware removal, network hardening, and automated backups. I protect what matters most to you.</p>
             </div>
         </section>
 
         <section id="about" class="about-section">
             <div class="container about-wrap">
-                <div class="headshot-container">
+                <div>
                     <div class="headshot-frame">
                         <img src="headshot.jpg" alt="Berne Bully Jr.">
                     </div>
                     <a href="https://www.linkedin.com/in/berne-bully" target="_blank" class="btn-linkedin">
                         <svg width="20" height="20" fill="currentColor" viewBox="0 0 16 16"><path d="M0 1.146C0 .513.526 0 1.175 0h13.65C15.474 0 16 .513 16 1.146v13.708c0 .633-.526 1.146-1.175 1.146H1.175C.526 16 0 14.867 0 14.234V1.146zM4.943 12.248V6.169H3.042v6.079h1.901zm-1.057-6.891c.646 0 1.05-.429 1.05-.965-.011-.548-.404-.965-1.037-.965-.632 0-1.051.417-1.051.965 0 .536.406.965 1.026.965h.012zM12.248 12.248V8.855c0-1.817-.966-2.663-2.265-2.663-1.047 0-1.517.576-1.779.991h.012v-.827H6.315c.025.536 0 6.079 0 6.079h1.902V9.062c0-.17.012-.341.062-.463.137-.341.449-.694.974-.694.688 0 .963.524.963 1.293v3.05h1.902z"/></svg>
-                        View Profile
+                        LinkedIn Verified
                     </a>
+                    <div class="cert-grid">
+                        <div class="cert-tag">M.S. Cybersecurity</div>
+                        <div class="cert-tag">CISM</div>
+                        <div class="cert-tag">CISA</div>
+                        <div class="cert-tag">AWS Security</div>
+                        <div class="cert-tag">CASP+</div>
+                        <div class="cert-tag">Systems Admin</div>
+                    </div>
                 </div>
                 <div>
                     <h2 style="font-family:'Playfair Display'; font-size:2.8rem; margin:0 0 0.5rem;">Berne Bully Jr., M.S.</h2>
-                    <p style="color:var(--accent); font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:1.5rem;">Senior Cyber Security Engineer & Cybersecurity Manager</p>
-                    <p>I founded Bully Cyber Security to bring high-level corporate expertise to my local community. Small business owners and residents deserve the same level of security and reliability as major corporations.</p>
-                    <p>With a Master’s Degree in Cybersecurity and experience managing complex digital infrastructures, I specialize in removing the technical headaches from your life. My approach is simple: clean engineering, honest pricing, and data that is always protected.</p>
+                    <p style="color:var(--accent); font-weight:800; text-transform:uppercase; letter-spacing:2px; margin-bottom:1.5rem;">Senior Cyber Security Engineer • Cybersecurity Manager</p>
+                    <p>I am a full-stack IT veteran with experience across every layer of the technology stack. My career began on the <strong>Helpdesk</strong>, evolved through <strong>Systems Administration</strong>, and culminated in lead <strong>Senior Cybersecurity Engineering</strong> roles within the Government and Commercial sectors.</p>
+                    <p>I founded Bully Cyber Security to offer a premium, person-to-person alternative to impersonal retail tech support. When you work with me, you aren't getting a "quick fix" from a trainee; you are getting the strategic knowledge of a Manager who has secured high-stakes environments for some of the world's most demanding organizations.</p>
                 </div>
             </div>
         </section>
@@ -172,6 +187,7 @@
                 <div class="price-item"><span>Computer & Tech Repair</span><span class="price-value">$99</span></div>
                 <div class="price-item"><span>Virus & Malware Removal</span><span class="price-value">$129</span></div>
                 <div class="price-item"><span>New Device / PC Setup</span><span class="price-value">$129</span></div>
+                <div class="price-item"><span>Business Website Creation</span><span class="price-value">$199+</span></div>
                 <div class="price-item"><span>Professional Email Setup</span><span class="price-value">$129</span></div>
                 <div class="price-item"><span>WiFi & Network Optimization</span><span class="price-value">$149</span></div>
                 <div class="price-item"><span>Security Audit & Hardening</span><span class="price-value">$149+</span></div>
