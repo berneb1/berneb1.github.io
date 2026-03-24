@@ -10,6 +10,8 @@
   />
   <meta name="theme-color" content="#18324e" />
   <meta name="format-detection" content="telephone=yes" />
+  <link rel="canonical" href="https://www.bullycyber.com/" />
+  <link rel="preload" as="image" href="cyber-hero.jpg" />
 
   <meta property="og:title" content="Small Business IT Support & Cybersecurity in Central Florida | Bully Cyber Security" />
   <meta
@@ -17,7 +19,9 @@
     content="Practical IT support, cybersecurity help, email setup, WiFi troubleshooting, backups, and computer repair for small businesses and local clients in Central Florida."
   />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="bcs-logo.png" />
+  <meta property="og:url" content="https://www.bullycyber.com/" />
+  <meta property="og:site_name" content="Bully Cyber Security" />
+  <meta property="og:image" content="https://www.bullycyber.com/bcs-logo.png" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Small Business IT Support & Cybersecurity in Central Florida | Bully Cyber Security" />
@@ -25,7 +29,7 @@
     name="twitter:description"
     content="Practical IT support, cybersecurity help, email setup, WiFi troubleshooting, backups, and computer repair for Central Florida."
   />
-  <meta name="twitter:image" content="bcs-logo.png" />
+  <meta name="twitter:image" content="https://www.bullycyber.com/bcs-logo.png" />
 
   <link rel="icon" type="image/png" href="bcs-logo.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -40,10 +44,12 @@
       "@context": "https://schema.org",
       "@type": "LocalBusiness",
       "name": "Bully Cyber Security",
+      "url": "https://www.bullycyber.com/",
       "description": "Bully Cyber Security provides small business IT support, cybersecurity help, Microsoft 365 setup, WiFi troubleshooting, backups, computer repair, and email setup in Central Florida.",
-      "image": "bcs-logo.png",
+      "image": "https://www.bullycyber.com/bcs-logo.png",
       "email": "berneb@bullycyber.com",
       "telephone": "+1-407-906-5796",
+      "priceRange": "$$",
       "areaServed": [
         "Orlando, Florida",
         "St. Cloud, Florida",
@@ -96,6 +102,23 @@
       opacity: 0.04;
       background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.8' numOctaves='2' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='220' height='220' filter='url(%23n)' opacity='.55'/%3E%3C/svg%3E");
       background-repeat: repeat;
+    }
+
+    .skip-link {
+      position: absolute;
+      left: 12px;
+      top: -60px;
+      background: #ffffff;
+      color: #12395b;
+      padding: 0.75rem 1rem;
+      border-radius: 12px;
+      font-weight: 800;
+      text-decoration: none;
+      z-index: 1001;
+    }
+
+    .skip-link:focus {
+      top: 12px;
     }
 
     .container {
@@ -661,9 +684,19 @@
       text-decoration: underline;
     }
 
+    .link-inline {
+      color: #ffffff;
+      font-weight: 800;
+      text-decoration: underline;
+    }
+
+    .mt-1 {
+      margin-top: 1rem;
+    }
+
     .mobile-call {
       position: fixed;
-      bottom: 18px;
+      bottom: calc(18px + env(safe-area-inset-bottom, 0px));
       left: 50%;
       transform: translateX(-50%);
       background: linear-gradient(135deg, #1e5b8f, #2b78b9);
@@ -816,6 +849,12 @@
       outline-offset: 3px;
     }
 
+    .btn:focus-visible {
+      outline: 3px solid var(--gold);
+      outline-offset: 3px;
+      transform: translateY(-1px);
+    }
+
     @media (max-width: 900px) {
       .col-4,
       .col-6 {
@@ -895,6 +934,11 @@
       .contact-strip {
         padding: 0.9rem;
       }
+
+      .mobile-call {
+        padding: 12px 20px;
+        font-size: 0.95rem;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -912,7 +956,9 @@
   </style>
 </head>
 <body>
-  <div class="nav container">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+
+  <nav class="nav container" aria-label="Primary">
     <a class="brand" href="#top" aria-label="Go to top of page">
       <div class="monogram">
         <img src="bcs-logo.png" alt="BCS logo" width="90" height="90" decoding="async" />
@@ -929,7 +975,7 @@
       <a href="#process">Process</a>
       <a href="#contact" class="cta">Consultation</a>
     </div>
-  </div>
+  </nav>
 
   <header class="hero" id="top">
     <img class="hero-logo" src="bcs-logo.png" alt="Bully Cyber Security logo" width="92" height="92" decoding="async" />
@@ -986,7 +1032,7 @@
     </div>
   </section>
 
-  <main class="container">
+  <main class="container" id="main-content">
     <section id="services" class="block">
       <div class="section-head">
         <h2>Services</h2>
@@ -1181,7 +1227,7 @@
             Our free 15-minute IT security checkup helps identify common issues with WiFi, email, backups, device security, and overall technology setup. It is a simple way to get practical feedback before committing to a larger service.
           </p>
 
-          <ul class="names-list" style="margin-top: 1rem;">
+          <ul class="names-list mt-1">
             <li><span>Email security review</span><span class="pill">Included</span></li>
             <li><span>WiFi and network basics review</span><span class="pill">Included</span></li>
             <li><span>Backup protection check</span><span class="pill">Included</span></li>
@@ -1299,7 +1345,7 @@
                 href="https://www.linkedin.com/in/berne-bully"
                 target="_blank"
                 rel="noopener noreferrer"
-                style="color:#ffffff; font-weight:800; text-decoration:underline;"
+                class="link-inline"
               >
                 www.linkedin.com/in/berne-bully
               </a>
