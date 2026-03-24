@@ -22,6 +22,8 @@
   <meta property="og:url" content="https://www.bullycyber.com/" />
   <meta property="og:site_name" content="Bully Cyber Security" />
   <meta property="og:image" content="https://www.bullycyber.com/bcs-logo.png" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
 
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="Small Business IT Support & Cybersecurity in Central Florida | Bully Cyber Security" />
@@ -271,7 +273,7 @@
     }
 
     .hero p {
-      max-width: 700px;
+      max-width: 760px;
       margin: auto;
       margin-top: 0.8rem;
       color: #f5fbff;
@@ -418,7 +420,7 @@
     .trust-item strong {
       display: block;
       font-family: "Playfair Display", serif;
-      font-size: 1.3rem;
+      font-size: 1.2rem;
       color: var(--green);
     }
 
@@ -624,36 +626,6 @@
       display: block;
     }
 
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
-    .stat-card {
-      background: white;
-      border: 1px solid var(--border);
-      border-radius: var(--radius);
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 16px 44px rgba(0, 0, 0, 0.08);
-    }
-
-    .stat-card strong {
-      display: block;
-      font-size: 1.7rem;
-      color: var(--green);
-      font-family: "Playfair Display", serif;
-    }
-
-    .stat-card span {
-      display: block;
-      margin-top: 0.25rem;
-      color: var(--muted);
-      font-weight: 700;
-    }
-
     .contact-highlight {
       margin-bottom: 1rem;
       padding: 1rem;
@@ -712,51 +684,6 @@
 
     .mobile-call:hover {
       background: #174b74;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.95rem 1rem;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-family: inherit;
-      font-size: 1rem;
-      box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.96);
-      color: #16324f;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #6d87a1;
-    }
-
-    label {
-      display: block;
-      font-weight: 900;
-      color: #ffffff;
-      margin-bottom: 0.45rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #f0f7ff;
-      position: relative;
-      z-index: 1;
-      font-weight: 600;
-    }
-
-    footer a {
-      color: #ffffff;
-      text-decoration: underline;
-      font-weight: 700;
     }
 
     .headshot-wrap {
@@ -832,6 +759,22 @@
       font-weight: 700;
     }
 
+    .service-bucket {
+      min-height: 100%;
+    }
+
+    .service-bucket ul {
+      margin: 0.8rem 0 0;
+      padding-left: 1rem;
+      color: #eef7ff;
+      line-height: 1.7;
+      font-weight: 600;
+    }
+
+    .service-bucket li + li {
+      margin-top: 0.3rem;
+    }
+
     .center-actions {
       text-align: center;
       margin-top: 20px;
@@ -864,10 +807,6 @@
       .story-card,
       .story-side {
         grid-column: span 12;
-      }
-
-      .stat-grid {
-        grid-template-columns: 1fr;
       }
 
       .trust-card {
@@ -979,9 +918,9 @@
 
   <header class="hero" id="top">
     <img class="hero-logo" src="bcs-logo.png" alt="Bully Cyber Security logo" width="92" height="92" decoding="async" />
-    <h1>Small Business IT Support, Home Service Repairs, Email Setup, and Security Help</h1>
+    <h1>IT Support and Cybersecurity Help for Small Businesses in Central Florida</h1>
     <p>
-      We help small businesses, home offices, and local residents fix technology problems, protect their systems, and keep things running smoothly. Serving Orlando, St. Cloud, Davenport, Tampa and surrounding Central Florida communities.
+      Enterprise-level cybersecurity experience, delivered in a practical and easy-to-understand way for small businesses, home offices, and local clients. We help secure systems, solve tech problems, and keep everything running smoothly.
     </p>
 
     <div class="hero-actions">
@@ -991,15 +930,12 @@
 
     <div class="hero-card">
       <div class="hero-chips">
-        <div class="hero-chip">💻 Computer Repair</div>
-        <div class="hero-chip">🏠 Home Service Repairs</div>
-        <div class="hero-chip">🦠 Virus &amp; Malware Removal</div>
-        <div class="hero-chip">📧 Business Email Setup</div>
-        <div class="hero-chip">🌐 Website Setup</div>
-        <div class="hero-chip">📶 WiFi &amp; Network Setup</div>
-        <div class="hero-chip">📡 WiFi Troubleshooting</div>
-        <div class="hero-chip">🛡️ Backup &amp; Data Protection</div>
-        <div class="hero-chip">🔐 Security Setup</div>
+        <div class="hero-chip">🛡️ Senior Cybersecurity Leadership</div>
+        <div class="hero-chip">🏢 Commercial Experience</div>
+        <div class="hero-chip">🏛️ Government Experience</div>
+        <div class="hero-chip">☁️ Microsoft 365 &amp; Cloud Support</div>
+        <div class="hero-chip">📶 WiFi &amp; Network Help</div>
+        <div class="hero-chip">🆓 Free 15-Minute Security Checkup</div>
       </div>
     </div>
 
@@ -1013,20 +949,20 @@
     <div class="trust-wrap">
       <div class="trust-card">
         <div class="trust-item">
-          <strong>Secure</strong>
-          <span>Protect your systems and devices</span>
-        </div>
-        <div class="trust-item">
-          <strong>Reliable</strong>
-          <span>Keep technology running smoothly</span>
-        </div>
-        <div class="trust-item">
-          <strong>Clear</strong>
-          <span>Simple help without technical jargon</span>
+          <strong>Senior-Level</strong>
+          <span>Security leadership for smaller organizations</span>
         </div>
         <div class="trust-item">
           <strong>Practical</strong>
-          <span>Support for homes and businesses</span>
+          <span>Real fixes without enterprise confusion</span>
+        </div>
+        <div class="trust-item">
+          <strong>Responsive</strong>
+          <span>Fast help for business and home tech issues</span>
+        </div>
+        <div class="trust-item">
+          <strong>Trusted</strong>
+          <span>Commercial and government experience</span>
         </div>
       </div>
     </div>
@@ -1036,151 +972,97 @@
     <section id="services" class="block">
       <div class="section-head">
         <h2>Services</h2>
-        <p>Technology and cybersecurity support designed for small businesses, home offices, and local residents.</p>
+        <p>Clear, practical technology and cybersecurity support designed for small businesses, home offices, and local clients.</p>
       </div>
 
       <div class="grid">
-        <div class="card col-4">
+        <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Computer Repair</h3>
+            <h3>IT Support &amp; Repairs</h3>
             <p class="story-p">
-              Fast support for slow computers, software issues, login problems, and technical errors that interrupt business operations or home use.
+              Day-to-day technical help to keep systems working, reduce downtime, and solve frustrating issues quickly.
             </p>
+            <ul>
+              <li>Computer repair</li>
+              <li>New computer setup</li>
+              <li>Virus and malware removal</li>
+              <li>Home technology troubleshooting</li>
+            </ul>
           </div>
         </div>
 
-        <div class="card col-4">
+        <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Home Service Repairs</h3>
+            <h3>Email, Cloud &amp; Business Setup</h3>
             <p class="story-p">
-              On-site home technology support for computers, printers, WiFi issues, email setup, device troubleshooting, and everyday tech problems.
+              Professional setup and support for the business tools your team depends on every day.
             </p>
+            <ul>
+              <li>Business email setup</li>
+              <li>Microsoft 365 support</li>
+              <li>Cloud administration</li>
+              <li>Business technology setup</li>
+            </ul>
           </div>
         </div>
 
-        <div class="card col-4">
+        <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Business Email Setup</h3>
+            <h3>WiFi &amp; Network Services</h3>
             <p class="story-p">
-              Professional email setup using platforms like Microsoft 365 and Google Workspace. We configure business email, accounts, and access so teams can work efficiently.
+              Better connectivity, fewer interruptions, and a more reliable home or office network.
             </p>
+            <ul>
+              <li>WiFi and network setup</li>
+              <li>WiFi troubleshooting</li>
+              <li>Printer and router connectivity</li>
+              <li>Network optimization</li>
+            </ul>
           </div>
         </div>
 
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>New Computer Setup</h3>
-            <p class="story-p">
-              Setup for new computers including account configuration, software installation, email setup, printer connection, security basics, and getting everything ready to use.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>Virus &amp; Malware Removal</h3>
-            <p class="story-p">
-              Help removing viruses, malware, pop-ups, suspicious software, and other threats that slow down your computer or put your information at risk.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>Website Setup &amp; Basic Business Websites</h3>
-            <p class="story-p">
-              Setup for simple business websites including basic page design, contact forms, business information, and getting your site ready for customers to view and use.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>WiFi &amp; Network Setup</h3>
-            <p class="story-p">
-              Setup and support for office or home WiFi, routers, connectivity, printers, and network basics so you stay connected and productive.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>WiFi Troubleshooting &amp; Optimization</h3>
-            <p class="story-p">
-              Support for slow WiFi, dropped connections, weak signal areas, printer connection problems, and network issues so your home or business stays connected and running smoothly.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
+        <div class="card col-4 service-bucket">
           <div class="card-pad">
             <h3>Backup &amp; Data Protection</h3>
             <p class="story-p">
-              Protect your business or home office from data loss, downtime, and ransomware with secure backups, recovery planning, and practical protection for everyday technology.
+              Practical protection against downtime, data loss, and ransomware for businesses and home offices.
             </p>
+            <ul>
+              <li>Backup planning</li>
+              <li>Recovery support</li>
+              <li>Data protection guidance</li>
+              <li>Ransomware risk reduction</li>
+            </ul>
           </div>
         </div>
 
-        <div class="card col-4">
+        <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Small Business IT Support</h3>
+            <h3>Cybersecurity Reviews &amp; Hardening</h3>
             <p class="story-p">
-              Practical day-to-day IT support for small businesses that need help with computers, user issues, software problems, connectivity, and keeping systems running smoothly.
+              Security guidance built on senior-level cybersecurity engineering and management experience.
             </p>
+            <ul>
+              <li>Business security checkups</li>
+              <li>Cybersecurity risk assessments</li>
+              <li>Security setup and hardening</li>
+              <li>Microsoft 365 security improvement</li>
+            </ul>
           </div>
         </div>
 
-        <div class="card col-4">
+        <div class="card col-4 service-bucket">
           <div class="card-pad">
-            <h3>Security Setup</h3>
+            <h3>Website &amp; Small Business Support</h3>
             <p class="story-p">
-              Clear guidance to help secure computers, email, cloud accounts, backups, and business systems without unnecessary complexity or confusing technical language.
+              Support for small businesses that need practical help getting technology and online presence set up correctly.
             </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>Business Technology Setup</h3>
-            <p class="story-p">
-              We help businesses properly set up computers, WiFi networks, printers, and business systems so everything works reliably and securely from day one.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>Cloud &amp; Microsoft 365 Support</h3>
-            <p class="story-p">
-              Setup and support for Microsoft 365, user accounts, email access, file sharing, permissions, and cloud administration for small business environments.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>Business Security Checkup</h3>
-            <p class="story-p">
-              We review your computers, email, WiFi, backups, and business systems to identify security issues and practical ways to improve protection.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>Cybersecurity Risk Assessment</h3>
-            <p class="story-p">
-              A structured review of your systems, email, cloud services, backups, and business processes to identify risk areas and provide practical recommendations.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4">
-          <div class="card-pad">
-            <h3>Microsoft 365 Security Hardening</h3>
-            <p class="story-p">
-              Improve protection for Microsoft 365 with stronger account security, MFA setup, email protection, admin review, and better configuration for small business use.
-            </p>
+            <ul>
+              <li>Basic business website setup</li>
+              <li>Contact form setup</li>
+              <li>General small business IT support</li>
+              <li>Ongoing consulting</li>
+            </ul>
           </div>
         </div>
       </div>
@@ -1245,7 +1127,7 @@
     <section class="block">
       <div class="section-head">
         <h2>Who We Help</h2>
-        <p>Technology and cybersecurity support for growing businesses, home offices, and local clients who need practical help.</p>
+        <p>Technology and cybersecurity support for growing businesses, home offices, and local clients who need practical, reliable help.</p>
       </div>
 
       <div class="card">
@@ -1253,9 +1135,9 @@
           <ul class="names-list">
             <li><span>Restaurants &amp; Hospitality Businesses</span><span class="pill">POS / WiFi / Security</span></li>
             <li><span>Law Firms &amp; Professional Offices</span><span class="pill">Email / Data Security</span></li>
-            <li><span>Small Medical &amp; Service Businesses</span><span class="pill">System Protection</span></li>
+            <li><span>Medical &amp; Service Businesses</span><span class="pill">Protection / Compliance Support</span></li>
             <li><span>Startups &amp; Growing Companies</span><span class="pill">Technology Setup</span></li>
-            <li><span>Local Businesses Without IT Staff</span><span class="pill">Consulting</span></li>
+            <li><span>Businesses Without Internal IT Staff</span><span class="pill">Ongoing Support</span></li>
             <li><span>Home Offices &amp; Residential Clients</span><span class="pill">On-Site Help</span></li>
           </ul>
         </div>
@@ -1265,34 +1147,34 @@
     <section id="about" class="block">
       <div class="section-head">
         <h2>Why Bully Cyber Security</h2>
-        <p>Practical technology and cybersecurity guidance for organizations and local clients that need clarity, support, and real solutions.</p>
+        <p>Senior-level cybersecurity experience delivered in a practical way for organizations and local clients who need clarity, support, and real solutions.</p>
       </div>
 
       <div class="story-wrap">
         <div class="story-card card">
           <div class="card-pad">
-            <h3 class="story-title">Practical support for real business needs</h3>
+            <h3 class="story-title">Enterprise-level knowledge without enterprise-level confusion</h3>
             <p class="story-p">
-              Bully Cyber Security helps small businesses, home offices, and local clients keep their technology secure and running smoothly.
+              Bully Cyber Security helps small businesses, home offices, and local clients keep their technology secure, reliable, and easier to manage.
             </p>
             <p class="story-p">
-              We provide practical support for computer problems, email setup, WiFi networks, backups, home service repairs, website setup, and cybersecurity protection. Our goal is to fix issues quickly, prevent security problems, and make sure your technology works reliably every day.
+              We combine practical IT support with cybersecurity leadership experience to help clients solve technology problems, strengthen defenses, and make better security decisions without confusing technical jargon.
             </p>
             <p class="story-p">
-              Whether you need help securing your systems, solving everyday computer issues, or getting your technology set up the right way, we provide clear guidance and dependable support.
+              Whether you need help with day-to-day issues, Microsoft 365, WiFi, backups, website setup, or a more structured security review, the goal is simple: protect your business, reduce downtime, and give you clear next steps that actually make sense.
             </p>
           </div>
         </div>
 
         <div class="story-side quote">
-          <strong>Focus Areas</strong>
-          <p>Small business and home support that combines security, reliability, and everyday technology help.</p>
+          <strong>What makes us different</strong>
+          <p>Real cybersecurity engineering and management experience applied to the everyday needs of small businesses and local clients.</p>
           <div class="tag-wrap">
-            <span class="tag">Computer Support</span>
-            <span class="tag">Home Service Repairs</span>
-            <span class="tag">Website Setup</span>
-            <span class="tag">WiFi Setup</span>
-            <span class="tag">Ransomware Protection</span>
+            <span class="tag">Senior Cybersecurity Leadership</span>
+            <span class="tag">Commercial Experience</span>
+            <span class="tag">Government Experience</span>
+            <span class="tag">Plain-English Guidance</span>
+            <span class="tag">Practical Support</span>
           </div>
         </div>
       </div>
@@ -1301,7 +1183,7 @@
     <section id="credentials" class="block">
       <div class="section-head">
         <h2>Trusted Security Professional</h2>
-        <p>Led by an experienced cybersecurity professional focused on practical protection and real business value.</p>
+        <p>Led by a senior cybersecurity professional with experience supporting both commercial organizations and government environments.</p>
       </div>
 
       <div class="story-wrap">
@@ -1325,19 +1207,19 @@
             <h3 class="story-title">Berne Bully Jr., M.S. Cybersecurity Founder — Bully Cyber Security</h3>
 
             <div class="founder-meta">
-              <span class="pill">Small Business IT Support</span>
-              <span class="pill">Cybersecurity Support</span>
-              <span class="pill">Cloud &amp; Email Setup</span>
+              <span class="pill">Senior Cybersecurity Engineer</span>
+              <span class="pill">Cybersecurity Manager</span>
+              <span class="pill">Commercial &amp; Government Experience</span>
             </div>
 
             <p class="story-p">
-              Cybersecurity professional with experience in vulnerability management, risk assessments, cloud security, compliance support, and security operations.
+              Senior Cybersecurity Engineer and Cybersecurity Manager with experience supporting commercial organizations and government environments across vulnerability management, risk assessments, cloud security, compliance support, and security operations.
             </p>
             <p class="story-p">
-              Bully Cyber Security was created to help growing businesses get real cybersecurity guidance without the enterprise-level confusion, inflated consulting model, or unnecessary complexity.
+              Bully Cyber Security was created to bring that level of security knowledge to small businesses and local clients in a practical, approachable way — without the inflated consulting model, unnecessary complexity, or enterprise-only mindset.
             </p>
             <p class="story-p">
-              The focus is simple: clear findings, stronger defenses, and practical next steps that businesses and local clients can actually implement.
+              The focus is simple: stronger protection, clear findings, faster problem-solving, and recommendations that clients can actually use to improve their business and technology environment.
             </p>
             <p class="story-p">
               LinkedIn:
@@ -1377,33 +1259,33 @@
     <section class="block">
       <div class="section-head">
         <h2>Why Clients Work With Us</h2>
-        <p>Technology support and security guidance that is clear, practical, and built for everyday business and home needs.</p>
+        <p>Technology support and cybersecurity guidance that feels more specialized, more practical, and more personal than generic big-box tech support.</p>
       </div>
 
       <div class="grid">
         <div class="card col-4">
           <div class="card-pad">
-            <h3>Easy to Understand</h3>
+            <h3>Senior-Level Security Knowledge</h3>
             <p class="story-p">
-              We explain problems and solutions in plain language so business owners and home users know what is happening and what needs to be done.
+              Clients benefit from real engineering and management experience in cybersecurity, not just basic troubleshooting.
             </p>
           </div>
         </div>
 
         <div class="card col-4">
           <div class="card-pad">
-            <h3>Professional Security Experience</h3>
+            <h3>Clear, Human Explanations</h3>
             <p class="story-p">
-              Built on real cybersecurity experience across risk, vulnerability management, cloud security, and security program support.
+              We explain issues and solutions in plain language so business owners and home users understand what is happening and what to do next.
             </p>
           </div>
         </div>
 
         <div class="card col-4">
           <div class="card-pad">
-            <h3>Practical Support</h3>
+            <h3>Practical Help That Fits Real Needs</h3>
             <p class="story-p">
-              From computer issues to email setup to business security, website setup, and home service repairs, clients get support that helps them stay productive and protected.
+              From computer repair to Microsoft 365 to business security, clients get practical support designed to reduce downtime and improve protection.
             </p>
           </div>
         </div>
@@ -1419,10 +1301,10 @@
       <div class="card">
         <div class="card-pad">
           <ul class="names-list">
-            <li><span>Security risk summary</span><span class="pill">Included</span></li>
-            <li><span>Technology recommendations</span><span class="pill">Included</span></li>
+            <li><span>Clear explanation of issues and risks</span><span class="pill">Included</span></li>
+            <li><span>Practical technology recommendations</span><span class="pill">Included</span></li>
             <li><span>Business-focused action plan</span><span class="pill">Included</span></li>
-            <li><span>Practical support guidance</span><span class="pill">Included</span></li>
+            <li><span>Security-minded support guidance</span><span class="pill">Included</span></li>
             <li><span>Optional follow-up consulting</span><span class="pill">Available</span></li>
           </ul>
         </div>
@@ -1442,28 +1324,28 @@
               <div class="time">Step 1</div>
               <div class="meta">
                 <strong>Consultation</strong>
-                <span>We discuss your business or home technology setup, current issues, and any security concerns you may have.</span>
+                <span>We discuss your technology setup, current problems, and any security concerns so we understand what matters most.</span>
               </div>
             </li>
             <li class="event">
               <div class="time">Step 2</div>
               <div class="meta">
                 <strong>Assessment</strong>
-                <span>We review systems, devices, email, WiFi, backups, and technology needs to identify issues, risks, and opportunities for improvement.</span>
+                <span>We review devices, email, WiFi, backups, cloud systems, and business needs to identify issues, risks, and priorities.</span>
               </div>
             </li>
             <li class="event">
               <div class="time">Step 3</div>
               <div class="meta">
-                <strong>Recommendations &amp; Support Plan</strong>
-                <span>You receive a clear breakdown of issues, risks, and practical recommendations tailored to your business or home setup.</span>
+                <strong>Recommendations</strong>
+                <span>You receive a clear breakdown of findings and practical recommendations tailored to your environment.</span>
               </div>
             </li>
             <li class="event">
               <div class="time">Step 4</div>
               <div class="meta">
-                <strong>Next Steps</strong>
-                <span>We help prioritize improvements so your systems can stay secure, efficient, and running smoothly.</span>
+                <strong>Support &amp; Next Steps</strong>
+                <span>We help you prioritize fixes and improvements so your systems stay more secure, reliable, and easier to manage.</span>
               </div>
             </li>
           </ul>
@@ -1482,7 +1364,7 @@
           <div class="contact-highlight">
             <strong>Let’s talk about your technology and security needs</strong>
             <p>
-              Whether you need computer repair, home service repairs, IT support, business email setup, website setup, WiFi setup, backup protection, ransomware protection, or cybersecurity guidance, this is the place to start. Most services begin with a quick conversation and a clear quote.
+              Whether you need computer repair, home service repairs, IT support, business email setup, website setup, WiFi setup, backup protection, Microsoft 365 support, or cybersecurity guidance, this is the place to start. Most services begin with a quick conversation and a clear quote.
               <br /><br />
               Email: <a href="mailto:berneb@bullycyber.com">berneb@bullycyber.com</a>
               <br />
