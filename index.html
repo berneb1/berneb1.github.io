@@ -563,18 +563,15 @@
       gap: 0.55rem;
     }
 
-    .names-list li {
-      padding: 0.78rem 0.9rem;
-      background: rgba(255, 255, 255, 0.10);
-      border-radius: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      font-weight: 800;
-      color: #ffffff;
-    }
+  .names-list li {
+  padding: 0.78rem 0.9rem;
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 14px;
+  display: block;
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  font-weight: 800;
+  color: #ffffff;
+}
 
     .pill {
       font-size: 0.82rem;
@@ -1101,25 +1098,56 @@
       </div>
     </section>
 
-    <section class="block">
-      <div class="section-head">
-        <h2>Who We Help</h2>
-        <p>Technology and cybersecurity support for growing businesses, home offices, and local clients who need practical, reliable help.</p>
-      </div>
+  <section class="block">
+  <div class="section-head">
+    <h2>Who We Help</h2>
+    <p>Technology and cybersecurity support for growing businesses, home offices, and local clients who need practical, reliable help.</p>
+  </div>
 
-      <div class="card">
-        <div class="card-pad">
-          <ul class="names-list">
-            <li><span>Restaurants &amp; Hospitality Businesses</span><span class="pill">POS / WiFi / Security</span></li>
-            <li><span>Law Firms &amp; Professional Offices</span><span class="pill">Email / Data Security</span></li>
-            <li><span>Medical &amp; Service Businesses</span><span class="pill">Protection / Compliance Support</span></li>
-            <li><span>Startups &amp; Growing Companies</span><span class="pill">Technology Setup</span></li>
-            <li><span>Businesses Without Internal IT Staff</span><span class="pill">Ongoing Support</span></li>
-            <li><span>Home Offices &amp; Residential Clients</span><span class="pill">On-Site Help</span></li>
-          </ul>
-        </div>
+  <div class="grid">
+    <div class="card col-6">
+      <div class="card-pad">
+        <h3>Restaurants &amp; Hospitality</h3>
+        <p class="story-p">POS systems, guest WiFi, office networks, device support, and security help.</p>
       </div>
-    </section>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-pad">
+        <h3>Law Firms &amp; Professional Offices</h3>
+        <p class="story-p">Email security, device protection, Microsoft 365 support, and business continuity help.</p>
+      </div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-pad">
+        <h3>Medical &amp; Service Businesses</h3>
+        <p class="story-p">Practical system protection, secure access, backup planning, and technology support.</p>
+      </div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-pad">
+        <h3>Startups &amp; Growing Companies</h3>
+        <p class="story-p">Business technology setup, account configuration, WiFi, cloud tools, and security guidance.</p>
+      </div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-pad">
+        <h3>Businesses Without Internal IT Staff</h3>
+        <p class="story-p">Reliable support for day-to-day IT issues, security concerns, and ongoing improvements.</p>
+      </div>
+    </div>
+
+    <div class="card col-6">
+      <div class="card-pad">
+        <h3>Home Offices &amp; Residential Clients</h3>
+        <p class="story-p">On-site help for computers, WiFi issues, device setup, troubleshooting, and protection.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
     <section id="about" class="block">
       <div class="section-head">
