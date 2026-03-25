@@ -282,7 +282,8 @@
       text-shadow: 0 4px 18px rgba(0, 0, 0, 0.18);
     }
 
-    .hero-actions {
+    .hero-actions,
+    .center-actions {
       margin-top: 1.25rem;
       display: flex;
       justify-content: center;
@@ -365,22 +366,28 @@
       gap: 0.85rem;
     }
 
-    .hero-point {
+    .hero-point,
+    .mini-card {
       background: rgba(255, 255, 255, 0.10);
       border: 1px solid rgba(255, 255, 255, 0.18);
       border-radius: 18px;
       padding: 0.95rem;
+    }
+
+    .hero-point {
       text-align: left;
     }
 
-    .hero-point strong {
+    .hero-point strong,
+    .mini-card strong {
       display: block;
       color: #ffffff;
       font-size: 1rem;
       margin-bottom: 0.25rem;
     }
 
-    .hero-point span {
+    .hero-point span,
+    .mini-card span {
       color: #eef7ff;
       font-weight: 650;
       line-height: 1.55;
@@ -405,8 +412,7 @@
       text-align: center;
     }
 
-    .contact-strip a,
-    .contact-strip span {
+    .contact-strip a {
       color: #ffffff;
       text-decoration: none;
       font-weight: 800;
@@ -486,10 +492,41 @@
       font-weight: 600;
     }
 
-    .grid {
+    .grid,
+    .story-wrap,
+    .services-mini,
+    .pricing-grid,
+    .stat-grid,
+    .credential-grid {
       display: grid;
-      grid-template-columns: repeat(12, 1fr);
       gap: 1rem;
+    }
+
+    .grid {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .story-wrap {
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    .services-mini {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
+
+    .pricing-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 0.75rem;
+    }
+
+    .stat-grid {
+      grid-template-columns: repeat(3, 1fr);
+      margin-top: 1rem;
+    }
+
+    .credential-grid {
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 0.65rem;
     }
 
     .col-4 {
@@ -500,100 +537,38 @@
       grid-column: span 6;
     }
 
-    .col-12 {
-      grid-column: span 12;
-    }
-
-    .card {
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      background: rgba(255, 255, 255, 0.12);
-      overflow: hidden;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
-    .card-pad {
-      padding: 1.15rem;
-    }
-
-    .service-bucket {
-      min-height: 100%;
-    }
-
-    .service-bucket ul {
-      margin: 0.8rem 0 0;
-      padding-left: 1rem;
-      color: #eef7ff;
-      line-height: 1.7;
-      font-weight: 600;
-    }
-
-    .service-bucket li + li {
-      margin-top: 0.3rem;
-    }
-
-    .services-top {
-      margin-bottom: 1rem;
-    }
-
-    .services-mini {
-      display: grid;
-      grid-template-columns: repeat(4, minmax(0, 1fr));
-      gap: 0.8rem;
-    }
-
-    .services-mini .mini-card {
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      border-radius: 18px;
-      padding: 0.9rem;
-      text-align: center;
-    }
-
-    .services-mini .mini-card strong {
-      display: block;
-      color: #ffffff;
-      margin-bottom: 0.2rem;
-      font-size: 1rem;
-    }
-
-    .services-mini .mini-card span {
-      color: #eef7ff;
-      font-weight: 650;
-      font-size: 0.92rem;
-      line-height: 1.45;
-    }
-
-    .service-symbol {
-      display: inline-block;
-      margin-bottom: 0.45rem;
-      font-size: 1.25rem;
-      line-height: 1;
-    }
-
-    .service-bucket h3 {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin: 0;
-      color: #ffffff;
-      font-size: 1.08rem;
-    }
-
-    .story-wrap {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
-      gap: 1rem;
-    }
-
     .story-card {
       grid-column: span 8;
     }
 
     .story-side {
       grid-column: span 4;
+    }
+
+    .card,
+    .quote {
+      border: 1px solid rgba(255, 255, 255, 0.14);
+      border-radius: var(--radius);
+      overflow: hidden;
+      backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
+    }
+
+    .card {
+      box-shadow: var(--shadow);
+      background: rgba(255, 255, 255, 0.12);
+    }
+
+    .quote {
+      background:
+        radial-gradient(700px 240px at 15% 0%, rgba(55, 230, 212, 0.12), transparent 55%),
+        rgba(255, 255, 255, 0.12);
+      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.10);
+      padding: 1.05rem 1.1rem;
+    }
+
+    .card-pad {
+      padding: 1.15rem;
     }
 
     .story-title {
@@ -611,18 +586,6 @@
       font-weight: 600;
     }
 
-    .quote {
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      background:
-        radial-gradient(700px 240px at 15% 0%, rgba(55, 230, 212, 0.12), transparent 55%),
-        rgba(255, 255, 255, 0.12);
-      border-radius: var(--radius);
-      box-shadow: 0 20px 70px rgba(0, 0, 0, 0.10);
-      padding: 1.05rem 1.1rem;
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-    }
-
     .quote strong {
       display: block;
       color: #ffffff;
@@ -637,14 +600,44 @@
       line-height: 1.6;
     }
 
-    .tag-wrap {
+    .service-symbol {
+      display: inline-block;
+      margin-bottom: 0.45rem;
+      font-size: 1.25rem;
+      line-height: 1;
+    }
+
+    .service-bucket {
+      min-height: 100%;
+    }
+
+    .service-bucket h3,
+    .audience-card h3,
+    .value-card h3,
+    .proof-card h3,
+    .choose-card h3,
+    .pain-card h3 {
+      margin: 0;
+      color: #ffffff;
+      font-size: 1.15rem;
+    }
+
+    .service-bucket h3 {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 1.08rem;
+    }
+
+    .tag-wrap,
+    .founder-meta {
       display: flex;
       gap: 0.5rem;
       flex-wrap: wrap;
-      margin-top: 0.85rem;
     }
 
-    .tag {
+    .tag,
+    .pill {
       display: inline-flex;
       padding: 0.5rem 0.75rem;
       background: rgba(255, 255, 255, 0.16);
@@ -654,49 +647,23 @@
       border: 1px solid rgba(255, 255, 255, 0.18);
     }
 
-    .names-list {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: grid;
-      gap: 0.55rem;
-    }
-
-    .names-list li {
-      padding: 0.78rem 0.9rem;
-      background: rgba(255, 255, 255, 0.10);
-      border-radius: 14px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      font-weight: 800;
-      color: #ffffff;
-    }
-
     .pill {
       font-size: 0.82rem;
       font-weight: 900;
       padding: 0.3rem 0.55rem;
-      border-radius: 999px;
-      background: rgba(255, 255, 255, 0.18);
-      color: #ffffff;
-      border: 1px solid rgba(255, 255, 255, 0.18);
       white-space: nowrap;
       flex-shrink: 0;
     }
 
-    .pricing-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 0.75rem;
+    .pricing-item,
+    .credential-item,
+    .names-list li {
+      background: rgba(255, 255, 255, 0.10);
+      border: 1px solid rgba(255, 255, 255, 0.14);
     }
 
     .pricing-item {
       padding: 0.9rem 1rem;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.14);
       border-radius: 16px;
       display: flex;
       flex-direction: column;
@@ -710,25 +677,47 @@
       line-height: 1.45;
     }
 
-    .audience-card h3,
-    .value-card h3,
-    .proof-card h3,
-    .choose-card h3,
-    .faq-card h3,
-    .pain-card h3,
-    .feedback-card h3 {
-      margin: 0;
+    .credential-item {
+      padding: 0.72rem 0.8rem;
+      border-radius: 14px;
       color: #ffffff;
-      font-size: 1.15rem;
+      font-weight: 700;
+      line-height: 1.45;
     }
 
-    .value-card,
-    .proof-card,
-    .choose-card,
-    .faq-card,
-    .pain-card,
-    .feedback-card {
-      min-height: 100%;
+    .credential-item small {
+      display: block;
+      margin-top: 0.2rem;
+      color: #eef7ff;
+      font-weight: 700;
+    }
+
+    .names-list,
+    .timeline,
+    .proof-list {
+      margin: 0;
+      padding: 0;
+    }
+
+    .names-list,
+    .timeline {
+      list-style: none;
+    }
+
+    .names-list {
+      display: grid;
+      gap: 0.55rem;
+    }
+
+    .names-list li {
+      padding: 0.78rem 0.9rem;
+      border-radius: 14px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      color: #ffffff;
     }
 
     .stack-list li {
@@ -747,9 +736,6 @@
     }
 
     .timeline {
-      list-style: none;
-      margin: 0;
-      padding: 0;
       display: flex;
       flex-direction: column;
       gap: 0.8rem;
@@ -785,13 +771,6 @@
       display: block;
     }
 
-    .stat-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-
     .stat-card {
       background: rgba(255, 255, 255, 0.9);
       border: 1px solid rgba(255, 255, 255, 0.55);
@@ -816,7 +795,6 @@
     }
 
     .proof-list {
-      margin: 0.8rem 0 0;
       padding-left: 1rem;
       color: #eef7ff;
       line-height: 1.7;
@@ -860,76 +838,11 @@
       line-height: 1.7;
     }
 
-    .contact-highlight a {
-      color: #ffffff;
-      font-weight: 800;
-      text-decoration: underline;
-    }
-
-    .mobile-call {
-      position: fixed;
-      bottom: calc(18px + env(safe-area-inset-bottom, 0px));
-      left: 50%;
-      transform: translateX(-50%);
-      background: linear-gradient(135deg, #1e5b8f, #2b78b9);
-      color: white;
-      font-weight: 800;
-      padding: 14px 26px;
-      border-radius: 999px;
-      text-decoration: none;
-      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
-      z-index: 999;
-      white-space: nowrap;
-      display: none;
-    }
-
-    .mobile-call:hover {
-      background: #174b74;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 0.95rem 1rem;
-      border-radius: 14px;
-      border: 1px solid rgba(255, 255, 255, 0.16);
-      font-family: inherit;
-      font-size: 1rem;
-      box-sizing: border-box;
-      background: rgba(255, 255, 255, 0.96);
-      color: #16324f;
-    }
-
-    textarea {
-      min-height: 140px;
-      resize: vertical;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #6d87a1;
-    }
-
-    label {
-      display: block;
-      font-weight: 900;
-      color: #ffffff;
-      margin-bottom: 0.45rem;
-    }
-
-    footer {
-      text-align: center;
-      padding: 2rem;
-      color: #f0f7ff;
-      position: relative;
-      z-index: 1;
-      font-weight: 600;
-    }
-
+    .contact-highlight a,
     footer a {
       color: #ffffff;
+      font-weight: 800;
       text-decoration: underline;
-      font-weight: 700;
     }
 
     .headshot-wrap {
@@ -959,17 +872,6 @@
       background: #dbe7f2;
     }
 
-    .founder-meta {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      margin: 0.35rem 0 0.9rem;
-    }
-
-    .founder-meta .pill {
-      font-size: 0.8rem;
-    }
-
     .credential-stack {
       margin-top: 1rem;
       padding-top: 1rem;
@@ -982,58 +884,49 @@
       color: #ffffff;
     }
 
-    .credential-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 0.65rem;
-    }
-
-    .credential-item {
-      padding: 0.72rem 0.8rem;
-      border-radius: 14px;
-      background: rgba(255, 255, 255, 0.10);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      color: #ffffff;
-      font-weight: 700;
-      line-height: 1.45;
-    }
-
-    .credential-item small {
-      display: block;
-      margin-top: 0.2rem;
-      color: #eef7ff;
-      font-weight: 700;
-    }
-
-    .center-actions {
+    footer {
       text-align: center;
-      margin-top: 20px;
-      display: flex;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      padding: 2rem;
+      color: #f0f7ff;
+      position: relative;
+      z-index: 1;
+      font-weight: 600;
+    }
+
+    .mobile-call {
+      position: fixed;
+      bottom: calc(18px + env(safe-area-inset-bottom, 0px));
+      left: 50%;
+      transform: translateX(-50%);
+      background: linear-gradient(135deg, #1e5b8f, #2b78b9);
+      color: white;
+      font-weight: 800;
+      padding: 14px 26px;
+      border-radius: 999px;
+      text-decoration: none;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.25);
+      z-index: 999;
+      white-space: nowrap;
+      display: none;
+    }
+
+    .mobile-call:hover {
+      background: #174b74;
     }
 
     a:focus-visible,
-    button:focus-visible,
-    input:focus-visible,
-    textarea:focus-visible {
+    button:focus-visible {
       outline: 3px solid var(--gold);
       outline-offset: 3px;
     }
 
     .btn:focus-visible {
-      outline: 3px solid var(--gold);
-      outline-offset: 3px;
       transform: translateY(-1px);
     }
 
     @media (max-width: 900px) {
       .col-4,
-      .col-6 {
-        grid-column: span 12;
-      }
-
+      .col-6,
       .story-card,
       .story-side {
         grid-column: span 12;
@@ -1069,8 +962,6 @@
 
       .nav-links {
         width: 100%;
-        display: flex;
-        flex-wrap: wrap;
         justify-content: center;
         gap: 0.8rem;
       }
@@ -1283,21 +1174,6 @@
               Straightforward starting prices, plain-English explanations, and practical next steps you can actually use.
             </p>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="section-head">
-        <h2>Who This Is Built For</h2>
-        <p>Focused support for small businesses, home offices, and local clients who need real help without enterprise-level complexity.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-pad">
-          <p class="relationship-note">
-            We specialize in practical support for small businesses and local clients. We are not trying to be a giant enterprise IT provider. Our focus is direct help, clear communication, and useful results.
-          </p>
         </div>
       </div>
     </section>
@@ -1564,11 +1440,11 @@
             </p>
 
             <p class="story-p">
-              We provide practical support for computer problems, email setup, WiFi networks, backups, home service repairs, website setup, and cybersecurity protection. Our goal is to fix issues quickly, prevent security problems, and make sure your technology works reliably every day.
+              We provide practical support for computer problems, email setup, WiFi networks, backups, website setup, home technology help, and cybersecurity protection. Our goal is to solve issues quickly, reduce security risk, and keep your technology working reliably every day.
             </p>
 
             <p class="story-p">
-              Whether you need help securing your systems, solving everyday computer issues, or getting your technology set up the right way, we provide clear guidance and dependable support.
+              Whether you need everyday IT support or stronger protection for your business, you get clear guidance, direct communication, and practical next steps.
             </p>
 
             <div class="stat-grid">
@@ -1644,21 +1520,6 @@
       </div>
     </section>
 
-    <section class="block">
-      <div class="section-head">
-        <h2>Client Feedback</h2>
-        <p>Client reviews coming soon as we continue building trusted relationships across Central Florida.</p>
-      </div>
-
-      <div class="card feedback-card">
-        <div class="card-pad">
-          <p class="relationship-note">
-            We’re actively working with clients across Central Florida. Verified client feedback and testimonials will be published here soon.
-          </p>
-        </div>
-      </div>
-    </section>
-
     <section id="credentials" class="block">
       <div class="section-head">
         <h2>Trusted Security Professional</h2>
@@ -1676,7 +1537,7 @@
 
         <div class="story-card card">
           <div class="card-pad">
-            <h3 class="story-title">Berne Bully Jr., M.S. Cybersecurity Founder — Bully Cyber Security</h3>
+            <h3 class="story-title">Berne Bully Jr., M.S. Cybersecurity, Founder, Bully Cyber Security</h3>
 
             <div class="founder-meta">
               <span class="pill">Small Business IT Support</span>
@@ -1690,27 +1551,19 @@
             </p>
 
             <p class="story-p">
-              Background includes hands-on work across technical support, systems administration, cloud environments, cybersecurity engineering, and security management — giving clients both practical IT help and higher-level security insight.
+              Background includes hands-on work across technical support, systems administration, cloud environments, cybersecurity engineering, and security management, giving clients both practical IT help and higher-level security insight.
             </p>
 
             <p class="story-p">
-              As a senior cybersecurity engineer and cybersecurity manager, the focus is not just fixing today’s issue, but helping businesses make smarter technology and security decisions long term.
+              The focus is not just fixing today’s issue, but helping businesses make smarter technology and security decisions over time.
             </p>
 
             <div class="quote" style="margin-top: 1rem;">
               <strong>What this means for you</strong>
               <p>
-                You get direct support from someone who understands both day-to-day IT problems and bigger-picture security strategy — with clear guidance, practical fixes, and no generic big-box runaround.
+                You get direct support from someone who understands both day-to-day IT problems and bigger-picture security strategy, with clear guidance and practical fixes.
               </p>
             </div>
-
-            <p class="story-p">
-              Bully Cyber Security was created to help growing businesses get real cybersecurity guidance without the enterprise-level confusion, inflated consulting model, or unnecessary complexity.
-            </p>
-
-            <p class="story-p">
-              The focus is simple: clear findings, stronger defenses, and practical next steps that businesses and local clients can actually implement.
-            </p>
 
             <p class="story-p">
               LinkedIn:
@@ -1730,7 +1583,7 @@
                 <div class="credential-item">Master of Science in Cybersecurity <small>Western Governors University</small></div>
                 <div class="credential-item">Bachelor of Science in Information Technology <small>Clayton State University</small></div>
                 <div class="credential-item">Associate of Science in Business Management <small>Southern Crescent Tech</small></div>
-                <div class="credential-item">AWS Certified Security – Specialty <small>AWS</small></div>
+                <div class="credential-item">AWS Certified Security - Specialty <small>AWS</small></div>
                 <div class="credential-item">Certified Information Systems Auditor (CISA) <small>ISACA</small></div>
                 <div class="credential-item">Certified Information Security Manager (CISM) <small>ISACA</small></div>
                 <div class="credential-item">CompTIA Advanced Security Practitioner (CASP+) <small>CompTIA</small></div>
@@ -1743,76 +1596,6 @@
               </div>
             </div>
           </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="section-head">
-        <h2>Why Clients Work With Us</h2>
-        <p>Technology support and security guidance that is clear, practical, and built for everyday business and home needs.</p>
-      </div>
-
-      <div class="grid">
-        <div class="card col-4 value-card">
-          <div class="card-pad">
-            <h3>Easy to Understand</h3>
-            <p class="story-p">
-              We explain problems and solutions in plain language so business owners and home users know what is happening and what needs to be done.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4 value-card">
-          <div class="card-pad">
-            <h3>Professional Security Experience</h3>
-            <p class="story-p">
-              Built on real cybersecurity experience across risk, vulnerability management, cloud security, and security program support.
-            </p>
-          </div>
-        </div>
-
-        <div class="card col-4 value-card">
-          <div class="card-pad">
-            <h3>Practical Support</h3>
-            <p class="story-p">
-              From computer issues to email setup to business security, website setup, and home service repairs, clients get support that helps them stay productive and protected.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="section-head">
-        <h2>Building Trusted Local Relationships</h2>
-        <p>We are focused on earning long-term trust with real work, clear communication, and dependable results.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-pad">
-          <p class="relationship-note">
-            We are actively working with small businesses and local clients across Central Florida. If you have worked with Bully Cyber Security, we welcome your feedback and reviews. Our goal is to earn trust through practical service, honest communication, and results clients can actually use.
-          </p>
-        </div>
-      </div>
-    </section>
-
-    <section class="block">
-      <div class="section-head">
-        <h2>What You Receive</h2>
-        <p>Every engagement is designed to leave you with clarity, direction, and technology that works better for your business or home office.</p>
-      </div>
-
-      <div class="card">
-        <div class="card-pad">
-          <ul class="names-list stack-list">
-            <li><div class="item-copy"><span>Security risk summary</span><span class="pill">Included</span></div></li>
-            <li><div class="item-copy"><span>Technology recommendations</span><span class="pill">Included</span></div></li>
-            <li><div class="item-copy"><span>Business-focused action plan</span><span class="pill">Included</span></div></li>
-            <li><div class="item-copy"><span>Practical support guidance</span><span class="pill">Included</span></div></li>
-            <li><div class="item-copy"><span>Optional follow-up consulting</span><span class="pill">Available</span></div></li>
-          </ul>
         </div>
       </div>
     </section>
